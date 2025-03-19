@@ -12,4 +12,9 @@ public class Shooting : MonoBehaviour
         Destroy(gameObject, 1f);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+    }
+
 }
