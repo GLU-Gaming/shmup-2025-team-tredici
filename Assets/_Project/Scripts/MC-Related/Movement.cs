@@ -15,7 +15,8 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-           //shoot
+            print("apple");
+            GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
         }
     }
 
@@ -31,10 +32,10 @@ public class Movement : MonoBehaviour
 
         if(Input.GetAxis("Horizontal") > 0)
         {
-            rb.AddRelativeForce(new Vector3(MCSpeed, 0, 0));
+            rb.AddRelativeForce(new Vector3(0, 0, MCSpeed));
         } else if (Input.GetAxis("Horizontal") < 0)
         {
-            rb.AddRelativeForce(-MCSpeed, 0, 0);
+            rb.AddRelativeForce(0, 0, -MCSpeed);
         }
     }
 }
