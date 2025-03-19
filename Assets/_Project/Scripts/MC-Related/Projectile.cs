@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = transform.forward * speed;
+        Destroy(gameObject, 1f);
     }
 
 }

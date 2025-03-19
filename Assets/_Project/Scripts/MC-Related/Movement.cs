@@ -15,7 +15,6 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print("apple");
             GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
         }
     }
