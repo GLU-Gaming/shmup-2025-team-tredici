@@ -220,13 +220,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206857546}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.3122191, y: -0, z: -0, w: 0.9500102}
-  m_LocalPosition: {x: 0.03, y: -0.79, z: -0.73}
-  m_LocalScale: {x: 6.3271127, y: -0.12984063, z: -0.18313797}
+  m_LocalRotation: {x: -0.7356218, y: -0, z: -0, w: 0.6773925}
+  m_LocalPosition: {x: 0.03, y: -0.95, z: -0.14}
+  m_LocalScale: {x: 8.5378065, y: -0.12984063, z: -0.18313797}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -36.386, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -94.72, y: 0, z: 0}
 --- !u!1 &323241718
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +472,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 4.164953, y: 0.4585495, z: 1.222817}
-  m_LocalScale: {x: 5.331589, y: 1, z: 0.26151}
+  m_LocalScale: {x: 5.331589, y: 1, z: 0.34346727}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 421229716}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 421229716}
   m_Layer: 0
   m_Name: Screen_Borders
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800, y: -525}
+  m_AnchoredPosition: {x: -800, y: -502}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099600705
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 1463780843}
   m_Layer: 0
   m_Name: testcube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1104,7 +1104,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: -0.237}
-  m_LocalScale: {x: 0.29573107, y: 0.29573107, z: 0.29573107}
+  m_LocalScale: {x: 0.29573107, y: 0.29883623, z: 0.29573107}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 380054899}
@@ -1186,6 +1186,7 @@ MonoBehaviour:
   EnemyOne: {fileID: 9026215996544048329, guid: 1da98aedb97db174796bf17f6d75175b, type: 3}
   SpawnInterval: 1
   MaxEnemies: 5
+  CurrentEnemies: 0
 --- !u!65 &1490928309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1628,7 +1629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -373, y: -524}
+  m_AnchoredPosition: {x: -373, y: -499}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887476410
@@ -1759,7 +1760,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -4.1850467, y: 0.27, z: 1.222817}
-  m_LocalScale: {x: 5.5873027, y: 1, z: 0.26151}
+  m_LocalScale: {x: 5.5873027, y: 1, z: 0.3783527}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 421229716}

@@ -10,7 +10,7 @@ public class EnemySpawning : MonoBehaviour
     public float SpawnInterval = 5f;    //Interval tussen de spawns
     private float LastSpawnTIme;        //Tijd van de laatste spawn
    [SerializeField] private float MaxEnemies;
-    private float CurrentEnemies = 0;
+    public float CurrentEnemies = 0;
 
     void Update()
     {

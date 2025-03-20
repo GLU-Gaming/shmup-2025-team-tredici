@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        TextoftheScore.text = "Score:" + CurrentScore;
+        TextoftheScore.text = "Score: " + CurrentScore;
         TextofLifes.text = "Lifes: " + CurrentLifes;
     }
 }

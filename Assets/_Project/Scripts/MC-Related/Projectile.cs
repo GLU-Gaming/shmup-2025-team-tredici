@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     private Rigidbody rb;
     private float speed = 5;

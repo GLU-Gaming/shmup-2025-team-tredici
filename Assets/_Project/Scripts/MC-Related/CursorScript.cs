@@ -5,10 +5,12 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] public float MCSpeed;
     [SerializeField] GameObject Bullet;
+    GameManager gameManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gameManager = FindFirstObjectByType<GameManager>();
     }
 
     void Update()
@@ -35,6 +37,14 @@ public class Movement : MonoBehaviour
         } else if (Input.GetAxis("Horizontal") < 0)
         {
             rb.AddRelativeForce(0, 0, -MCSpeed);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
         }
     }
 }
