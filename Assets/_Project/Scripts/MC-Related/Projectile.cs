@@ -3,7 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Rigidbody rb;
-    private float speed = 5;
+    private float speed = 50;
 
     private void Start()
     {

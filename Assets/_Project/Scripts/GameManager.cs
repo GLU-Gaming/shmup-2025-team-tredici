@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,5 +17,10 @@ public class GameManager : MonoBehaviour
     {
         TextoftheScore.text = "Score: " + CurrentScore;
         TextofLifes.text = "Lifes: " + CurrentLifes;
+        if (CurrentLifes <= 0)
+        {
+            SceneManager.LoadScene(2);
+
+        }
     }
 }

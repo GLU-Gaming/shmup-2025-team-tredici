@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -23,13 +24,13 @@ public class EnemySpawning : MonoBehaviour
 
     void SpawnObject()
     {
-        Vector3 RandomPosition = new Vector3(Random.Range(0, 3), Random.Range(0, 2), 0);
+        Vector3 RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-9, 13), 0);
         Collider[] ColliderArray = Physics.OverlapSphere(RandomPosition, 0);
         if (ColliderArray.Length == 0)
         {
             if (EnemyOne != null && CurrentEnemies < MaxEnemies)
             {
-                Instantiate(EnemyOne, RandomPosition, transform.rotation);
+                Instantiate(EnemyOne, RandomPosition, EnemyOne.transform.rotation);
                 CurrentEnemies += 1;
             }
             else if (EnemyOne == null)

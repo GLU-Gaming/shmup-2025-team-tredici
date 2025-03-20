@@ -7,9 +7,6 @@ public class Alien : EnemyBase
         // Goes towards you 
         base.EnemyMovement();
         EnemyMaxHP = 3;
-
-
-
     }
 
     public override void EnemyAttack()
