@@ -5,11 +5,17 @@ public class EnemyBase : MonoBehaviour
 {
     public int EnemyMaxHP;
     private int EnemyCurrentHP;
+    [SerializeField] private GameObject EnemyBullet;
+
     GameManager GameManagerScript;
     EnemySpawning EnemySpawningScript;
+    private GameObject PlayerCharachter;
+    public Rigidbody rb;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        PlayerCharachter = GameObject.FindWithTag("Player");
         GameManagerScript = FindFirstObjectByType<GameManager>();
         EnemySpawningScript = FindFirstObjectByType<EnemySpawning>();
         EnemyCurrentHP = EnemyMaxHP;
@@ -33,6 +39,7 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void EnemyAttack()
     {
+        Vector3 direction = PlayerCharachter.transform.position;
 
     }
 
