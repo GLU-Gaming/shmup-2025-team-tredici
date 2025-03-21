@@ -11,7 +11,6 @@ public class Alien : EnemyBase
 
     public override void EnemyAttack()
     {
-        // Just shoots
         base.EnemyAttack();
     }
 

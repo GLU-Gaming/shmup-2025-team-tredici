@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 public class EnemySpawning : MonoBehaviour
 {
     public GameObject EnemyOne;         //Het object dat je wilt spawnen
+    public GameObject EnemyTwo;
+    public GameObject EnemyThree;
     public float SpawnInterval = 5f;    //Interval tussen de spawns
     private float LastSpawnTIme;        //Tijd van de laatste spawn
    [SerializeField] private float MaxEnemies;

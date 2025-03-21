@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1566254284316870303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5011762179819861786}
+  m_Layer: 0
+  m_Name: BulletSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5011762179819861786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566254284316870303}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0259, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8950712999040419820}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8916541711132123143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,7 +113,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: be06d9684f424dc468761889146e5fed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5011762179819861786}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
       insertIndex: -1
@@ -131,4 +165,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyMaxHP: 3
   EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
+  BulletSpawnPoint: {fileID: 5011762179819861786}
   rb: {fileID: 0}
+--- !u!4 &8950712999040419820 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
+  m_PrefabInstance: {fileID: 8916541711132123143}
+  m_PrefabAsset: {fileID: 0}

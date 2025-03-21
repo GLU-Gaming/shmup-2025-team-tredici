@@ -1255,6 +1255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyOne: {fileID: 8609900211884973398, guid: 2bb57f49b9bd8d44885cbf9615c5c992, type: 3}
+  EnemyTwo: {fileID: 8689172514486858959, guid: 8ef17854479045e4b9ce75ada52e42a9, type: 3}
+  EnemyThree: {fileID: 9026215996544048329, guid: 1da98aedb97db174796bf17f6d75175b, type: 3}
   SpawnInterval: 1
   MaxEnemies: 5
   CurrentEnemies: 0
