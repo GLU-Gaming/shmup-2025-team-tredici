@@ -6,7 +6,7 @@ public class EnemyBase : MonoBehaviour
     public int EnemyMaxHP;
     private int EnemyCurrentHP;
     public GameObject EnemyBullet;
-    private float ShootCooldown = 2;
+    public float ShootCooldown = 2;
     [SerializeField] private Transform BulletSpawnPoint;
     
 
@@ -44,7 +44,7 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void EnemyMovement()
     {
-
+        transform.position = new Vector3(transform.position.x , transform.position.y , 0);
     }
 
     public virtual void EnemyAttack()

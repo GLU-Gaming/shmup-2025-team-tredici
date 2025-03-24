@@ -36,7 +36,7 @@ public class EnemySpawning : MonoBehaviour
                 Instantiate(EnemyOne, RandomPosition, EnemyOne.transform.rotation);
                 CurrentEnemies += 1;
             }
-            else if (EnemyOne == null)
+            else if (EnemyOne == null || EnemyTwo == null || EnemyThree == null)
             {
                 print("Cannot Spawn (GameManager Script)");
             }
