@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI TextoftheScore;
-    [SerializeField] TextMeshProUGUI TextofLifes; //TEMP - Will become objects
     public int CurrentScore;
     public int CurrentLifes = 3;
     [SerializeField] private GameObject[] Hearts;
@@ -18,13 +16,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         TextoftheScore.text = "Score: " + CurrentScore;
-        TextofLifes.text = "Lifes: " + CurrentLifes;
         if (CurrentLifes <= 0)
         {
+            //if you die you go to death scene
             SceneManager.LoadScene(2);
 
         }
 
+        // Sets the hearts depending on the current lives
         if (CurrentLifes == 2)
         {
             Hearts[2].SetActive(false);
