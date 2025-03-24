@@ -10,8 +10,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private Transform BulletSpawnPoint;
     
 
-    GameManager GameManagerScript;
-    EnemySpawning EnemySpawningScript;
+    public GameManager GameManagerScript;
+    public EnemySpawning EnemySpawningScript;
     private GameObject PlayerCharachter;
     public Rigidbody rb;
     private Rigidbody EnemyprojectileRigidBody;
@@ -35,9 +35,7 @@ public class EnemyBase : MonoBehaviour
         // It dies when HP reaches 0
         if (EnemyCurrentHP == 0)
         {
-            EnemySpawningScript.CurrentEnemies -= 1;
-            GameManagerScript.CurrentScore += 1;
-            Destroy(gameObject);
+            OnDeath();
         }
         ShootCooldown = ShootCooldown - Time.deltaTime;
     }
@@ -63,6 +61,14 @@ public class EnemyBase : MonoBehaviour
         {
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
+    }
+
+    public virtual void OnDeath()
+    {
+        //This is what happends when the enemy dies
+        EnemySpawningScript.CurrentEnemies -= 1;
+        GameManagerScript.CurrentScore += 1;
+        Destroy(gameObject);
     }
 
 }

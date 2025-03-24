@@ -12,4 +12,11 @@ public class NewMonoBehaviourScript : EnemyBase
     {
         base.EnemyAttack();
     }
+
+    public override void OnDeath()
+    {
+        EnemySpawningScript.CurrentSpiders -= 1;
+        GameManagerScript.CurrentScore += 2;
+        Destroy(gameObject);
+    }
 }

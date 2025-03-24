@@ -41,15 +41,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.54038
+      value: 0.47542092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.54038
+      value: 0.47542092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.54038
+      value: 0.47542092
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -188,4 +188,6 @@ MonoBehaviour:
   EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
   ShootCooldown: 2
   BulletSpawnPoint: {fileID: 4709923303360919972}
+  GameManagerScript: {fileID: 0}
+  EnemySpawningScript: {fileID: 0}
   rb: {fileID: 0}
