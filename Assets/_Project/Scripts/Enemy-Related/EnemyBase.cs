@@ -63,6 +63,11 @@ public class EnemyBase : MonoBehaviour
         {
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
     }
 
     public virtual void OnDeath()

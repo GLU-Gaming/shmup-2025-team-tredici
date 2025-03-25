@@ -19,16 +19,21 @@ public class EnemyBulletDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
-  
-        } else if (collision.gameObject.CompareTag("Player"))
+            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+        }
+        else if (collision.gameObject.CompareTag("Player"))
         {
             manager.CurrentLifes -= 1;
             Destroy(gameObject);
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }
     }
+
 }
