@@ -152,11 +152,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyMaxHP: 6
-  EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
+  EnemyBullet: {fileID: 426933466582610228, guid: a32c64256029b47459ecc3594e28cda0, type: 3}
   ShootCooldown: 2
+  moveDirection: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0
   BulletSpawnPoint: {fileID: 177167248418979988}
   GameManagerScript: {fileID: 0}
   EnemySpawningScript: {fileID: 0}
+  PlayerCharachter: {fileID: 0}
   rb: {fileID: 0}
 --- !u!4 &5643416499913643620 stripped
 Transform:
