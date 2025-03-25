@@ -132,6 +132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 371fd76654ac4d3459ed7b7c1e5c9e5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7053265203460823210}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 371fd76654ac4d3459ed7b7c1e5c9e5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5710843613564773233}
   m_SourcePrefab: {fileID: 100100000, guid: 371fd76654ac4d3459ed7b7c1e5c9e5d, type: 3}
 --- !u!4 &1512005507794422704 stripped
 Transform:
@@ -158,9 +161,12 @@ MonoBehaviour:
   EnemyMaxHP: 2
   EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
   ShootCooldown: 2
+  moveDirection: {x: 0, y: 0, z: 0}
+  MoveSpeed: 2
   BulletSpawnPoint: {fileID: 238451820084667942}
   GameManagerScript: {fileID: 0}
   EnemySpawningScript: {fileID: 0}
+  PlayerCharachter: {fileID: 0}
   rb: {fileID: 0}
 --- !u!65 &7053265203460823210
 BoxCollider:
@@ -183,3 +189,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6404212, y: 3.3658984, z: 3.9943037}
   m_Center: {x: -0.32021117, y: 4.6916466, z: -2.9347441}
+--- !u!54 &5710843613564773233
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2283439716973220106}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 120
+  m_CollisionDetection: 0
