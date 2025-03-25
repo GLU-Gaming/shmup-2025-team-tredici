@@ -164,8 +164,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyMaxHP: 3
-  EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
+  EnemyBullet: {fileID: 1667056066566340112, guid: 35eea212aa74672449122d6aa429d948, type: 3}
+  ShootCooldown: 2
   BulletSpawnPoint: {fileID: 5011762179819861786}
+  GameManagerScript: {fileID: 0}
+  EnemySpawningScript: {fileID: 0}
   rb: {fileID: 0}
 --- !u!4 &8950712999040419820 stripped
 Transform:
