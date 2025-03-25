@@ -7,12 +7,14 @@ public class EnemyBase : MonoBehaviour
     private int EnemyCurrentHP;
     public GameObject EnemyBullet;
     public float ShootCooldown = 2;
+    public Vector3 moveDirection;
+    [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
     
 
     public GameManager GameManagerScript;
     public EnemySpawning EnemySpawningScript;
-    private GameObject PlayerCharachter;
+    public GameObject PlayerCharachter;
     public Rigidbody rb;
     private Rigidbody EnemyprojectileRigidBody;
 

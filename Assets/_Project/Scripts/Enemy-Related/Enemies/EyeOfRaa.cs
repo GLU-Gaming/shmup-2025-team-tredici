@@ -12,4 +12,11 @@ public class EyeOfRaa : EnemyBase
     {
         base.EnemyAttack();
     }
+
+    public override void OnDeath()
+    {
+        EnemySpawningScript.CurrentEyes -= 1;
+        GameManagerScript.CurrentScore += 3;
+        Destroy(gameObject);
+    }
 }
