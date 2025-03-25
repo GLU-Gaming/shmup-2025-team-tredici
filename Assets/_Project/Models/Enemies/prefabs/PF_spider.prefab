@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyMaxHP: 2
-  EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
+  EnemyBullet: {fileID: 8517618235495227583, guid: dd99f9bfcd6fc86489b0b46c8d76d712, type: 3}
   ShootCooldown: 2
   moveDirection: {x: 0, y: 0, z: 0}
   MoveSpeed: 3
