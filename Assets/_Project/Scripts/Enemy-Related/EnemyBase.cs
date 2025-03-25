@@ -52,7 +52,7 @@ public class EnemyBase : MonoBehaviour
         if (ShootCooldown <= 0)
         {
             // spawns bullet
-            GameObject Enemyprojectile = Instantiate(EnemyBullet, BulletSpawnPoint.position, Quaternion.identity);
+            GameObject Enemyprojectile = Instantiate(EnemyBullet, BulletSpawnPoint.position, transform.rotation);
             ShootCooldown = 2;
         }
     }
