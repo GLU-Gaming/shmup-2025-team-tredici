@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: -4747917413154575537, guid: 299bf305814c4914bac598c4ed6e23e3, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1838475865fa344468b96accc7f51cf2, type: 2}
+      objectReference: {fileID: 2100000, guid: 7f532ead895ae7e4192cdd8c9ef30591, type: 2}
     - target: {fileID: -3552015745089763109, guid: 299bf305814c4914bac598c4ed6e23e3, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9397693
@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 299bf305814c4914bac598c4ed6e23e3, type: 3}
       propertyPath: m_Name
-      value: hand2
+      value: PF_Zahandu
       objectReference: {fileID: 0}
     - target: {fileID: 1540414477123651972, guid: 299bf305814c4914bac598c4ed6e23e3, type: 3}
       propertyPath: m_LocalRotation.w
