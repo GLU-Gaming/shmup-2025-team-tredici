@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyBulletDestroy : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     Rigidbody rb;
     private int ShootSpeed = 10;
@@ -9,7 +9,7 @@ public class EnemyBulletDestroy : MonoBehaviour
 
     void Start()
     {
-        Player =  GameObject.FindWithTag("Player");
+        Player = GameObject.FindWithTag("Player");
         manager = FindFirstObjectByType<GameManager>();
         rb = GetComponent<Rigidbody>();
         Destroy(gameObject, 5f);
@@ -29,6 +29,10 @@ public class EnemyBulletDestroy : MonoBehaviour
         {
             manager.CurrentLifes -= 1;
             Destroy(gameObject);
+        }
+        else if (collision.gameObject.GetComponent<EnemyBase>())
+        {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
         else
         {

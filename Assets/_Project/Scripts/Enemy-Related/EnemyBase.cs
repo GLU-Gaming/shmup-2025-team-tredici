@@ -10,7 +10,7 @@ public class EnemyBase : MonoBehaviour
     public Vector3 moveDirection;
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
-    
+
 
     public GameManager GameManagerScript;
     public EnemySpawning EnemySpawningScript;
@@ -44,7 +44,7 @@ public class EnemyBase : MonoBehaviour
 
     public virtual void EnemyMovement()
     {
-        transform.position = new Vector3(transform.position.x , transform.position.y , 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     public virtual void EnemyAttack()
@@ -64,9 +64,12 @@ public class EnemyBase : MonoBehaviour
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.GetComponent<EnemyBase>())
         {
-            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+        } else if (collision.gameObject.GetComponent<EnemyBullet>())
+        {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
     }
 
