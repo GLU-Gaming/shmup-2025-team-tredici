@@ -51,7 +51,7 @@ public class EnemySpawning : MonoBehaviour
                 print("Max amount of enemies");
             }
 
-            if (GameManagerScript.CurrentScore > 5 && CurrentSpiders < MaxEnemies + 2)
+            if (GameManagerScript.CurrentScore > 5 && CurrentSpiders < MaxEnemies + 1)
             {
                 RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-9, 13), 0);
                 Instantiate(EnemyTwo , RandomPosition , EnemyTwo.transform.rotation );
