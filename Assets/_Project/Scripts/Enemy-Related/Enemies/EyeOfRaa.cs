@@ -1,12 +1,16 @@
+using System.Security.Claims;
 using UnityEngine;
 
 public class EyeOfRaa : EnemyBase
 {
+    Vector3 pos;
     public override void EnemyMovement()
     {
-        // Goes towards you 
-        base.EnemyMovement();
         EnemyMaxHP = 6;
+
+        pos = transform.position;
+        transform.position = new Vector3( pos.x ,Mathf.Sin(Time.time)*10,pos.z);
+
     }
     public override void EnemyAttack()
     {

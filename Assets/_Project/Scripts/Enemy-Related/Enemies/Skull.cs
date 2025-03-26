@@ -5,7 +5,7 @@ public class Skull : EnemyBase
     public override void EnemyMovement()
     {
         EnemyMaxHP = 2;
-        // The Skull goes towards the player and then explodes
+        // The Skull goes towards the player and then 'explodes'
         // CREDITS: https://www.youtube.com/watch?v=ZExSz7x69j8
         if (PlayerCharachter)
         {

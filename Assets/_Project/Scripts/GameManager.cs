@@ -6,11 +6,13 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI TextoftheScore;
     public int CurrentScore;
+    public static int FinalScore;
     public int CurrentLifes = 3;
     [SerializeField] private GameObject[] Hearts;
 
     void Start()
     {
+        FinalScore = 0;
     }
 
     void Update()
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
         if (CurrentLifes <= 0)
         {
             //if you die you go to death scene
+            CurrentScore = FinalScore;
             SceneManager.LoadScene(2);
 
         }

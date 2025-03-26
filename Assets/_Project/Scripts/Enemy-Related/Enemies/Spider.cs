@@ -6,6 +6,7 @@ public class Spider : EnemyBase
     public override void EnemyMovement()
     {
         EnemyMaxHP = 2;
+        ShootCooldownChangeable = 4;
 
         // The spider goes towards the player and shoots you 
         // CREDITS: https://www.youtube.com/watch?v=ZExSz7x69j8

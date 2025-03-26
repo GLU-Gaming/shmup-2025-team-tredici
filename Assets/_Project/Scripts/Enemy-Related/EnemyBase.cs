@@ -7,6 +7,7 @@ public class EnemyBase : MonoBehaviour
     private int EnemyCurrentHP;
     public GameObject EnemyBullet;
     public float ShootCooldown = 2;
+    public float ShootCooldownChangeable = 2;
     public Vector3 moveDirection;
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
@@ -21,6 +22,7 @@ public class EnemyBase : MonoBehaviour
     void Start()
     {
         // Sets stuff and finds stuff for/to the enemy
+        ShootCooldown = ShootCooldownChangeable;
         EnemyprojectileRigidBody = EnemyBullet.GetComponent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         PlayerCharachter = GameObject.FindWithTag("Player");
