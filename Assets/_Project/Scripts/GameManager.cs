@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Boss battle start
-        if (CurrentScore >= 50 && BossBattleActive == false && BluescreenActivated == false)
+        if (CurrentScore >= 50 && BossBattleActive == false && BluescreenActivated == false && Bluescreen.activeSelf == false)
         {
             DestroyEnemies();
             Bluescreen.SetActive(true);
@@ -53,14 +53,20 @@ public class GameManager : MonoBehaviour
             Bluescreen.SetActive(false);
             BluescreenActivated = false;
             BossBattleActive = true;
+            ShakeScript.StartShake();
         }
 
-        //if (Bluescreen.activeSelf == true)
-        //{
-        //    while ( ){
-
-        //    }
-        //}
+        if (Bluescreen.activeSelf == true)
+        {
+            int i = 0;
+            i++;
+            if (i >= 10)
+            {
+                BluescreenActivated = true;
+            }
+              
+            
+        }
     }
 
     private void DestroyEnemies()
