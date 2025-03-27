@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
     public static int FinalScore;
     public int CurrentLifes = 3;
     [SerializeField] private GameObject[] Hearts;
+    private Shake ShakeScript;
+    private bool BossBattleActive = false;
 
     void Start()
     {
+        ShakeScript = FindFirstObjectByType<Shake>();
         FinalScore = 0;
     }
 
@@ -37,5 +40,24 @@ public class GameManager : MonoBehaviour
             Hearts[1].SetActive(false);
             Hearts[4].SetActive(true);
         }
+
+        //Boss battle start
+        if (CurrentScore >= 50 && BossBattleActive == false)
+        {
+            DestroyEnemies();
+            BossBattleActive=true;
+        }
+    }
+
+    private void DestroyEnemies()
+    {
+        GameObject[] CurrentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] CurrentBullets = GameObject.FindGameObjectsWithTag("Bullet");
+        foreach (GameObject Enemy in CurrentEnemies)
+            Destroy(Enemy);
+        foreach (GameObject Bullet in CurrentBullets)
+            Destroy(Bullet);
+
+       ShakeScript.StartShake();
     }
 }
