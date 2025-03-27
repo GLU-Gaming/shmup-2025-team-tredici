@@ -94,7 +94,7 @@ public class EnemySpawning : MonoBehaviour
                     RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-11, 7), 0);
                     Instantiate(EnemyFive, RandomPosition, EnemyFive.transform.rotation);
                     CurrentCoolingCats += 1;
-                }
+                } 
             }
         }
     } 

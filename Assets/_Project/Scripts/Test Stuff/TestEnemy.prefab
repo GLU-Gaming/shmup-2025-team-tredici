@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyMaxHP: 0
-  EnemyBullet: {fileID: 0}
+  EnemyBullet: {fileID: 426933466582610228, guid: a32c64256029b47459ecc3594e28cda0, type: 3}
   ShootCooldown: 2
   ShootCooldownChangeable: 2
   moveDirection: {x: 0, y: 0, z: 0}
