@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1156930523944303218}
   - component: {fileID: 7067274701477875029}
   - component: {fileID: 9092538689379977310}
-  - component: {fileID: 1154305356189242860}
+  - component: {fileID: 8631365545274555217}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -141,7 +141,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1154305356189242860
+--- !u!114 &8631365545274555217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,10 +150,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 9026215996544048329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4486c0a4d5323914daec2da0aeb4a8ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e2fe4f6284ee7894fac141dc641cc490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHP: 2
-  EnemyBullet: {fileID: 3489204487703815719, guid: 7dab2e9576f7f4d409e0a775abefcee0, type: 3}
+  EnemyMaxHP: 0
+  EnemyBullet: {fileID: 0}
+  ShootCooldown: 2
+  ShootCooldownChangeable: 2
+  moveDirection: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0
   BulletSpawnPoint: {fileID: 8052370467540275788}
+  GameManagerScript: {fileID: 0}
+  EnemySpawningScript: {fileID: 0}
+  PlayerCharachter: {fileID: 0}
   rb: {fileID: 0}

@@ -7,6 +7,10 @@ public class EnemySpawning : MonoBehaviour
     public GameObject EnemyTwo;
     public GameObject EnemyThree;
     public GameObject EnemyFour; //skull
+    public GameObject EnemyFive; //cooling cat
+    public GameObject Pickup_FastShoot;
+    public GameObject Pickup_LaserShoot;
+    public GameObject Pickup_Shield;
 
     public float SpawnInterval = 5f;    //Interval tussen de spawns
     private float LastSpawnTIme;        //Tijd van de laatste spawn
@@ -20,6 +24,9 @@ public class EnemySpawning : MonoBehaviour
     public float CurrentCoolingCats = 0;
     public float CurrentSuns = 0;
 
+    //The Powerup icons
+    
+
     private void Start()
     {
         GameManagerScript = FindFirstObjectByType<GameManager>();
@@ -31,6 +38,11 @@ public class EnemySpawning : MonoBehaviour
         {
             SpawnObject();
             LastSpawnTIme = Time.time;
+        }
+
+        if (GameManagerScript.CurrentScore >= 12)
+        {
+            SpawnPickup();
         }
     }
 
@@ -74,7 +86,20 @@ public class EnemySpawning : MonoBehaviour
                 Instantiate (EnemyFour , RandomPosition , EnemyFour.transform.rotation );
                 CurrentSkulls += 1; 
             }
+
+            if (GameManagerScript.CurrentScore > 29 && CurrentCoolingCats < MaxEnemies - 2) 
+            {
+                RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-11, 7), 0);
+                Instantiate (EnemyFive , RandomPosition , EnemyFive.transform.rotation );
+                CurrentCoolingCats += 1;
+            }
         }
     } 
+
+
+    void SpawnPickup()
+    {
+
+    }
 
 }
