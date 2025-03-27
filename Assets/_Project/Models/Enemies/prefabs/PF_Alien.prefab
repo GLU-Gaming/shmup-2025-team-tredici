@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5011762179819861786}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletSpawnpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,9 +99,17 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: be06d9684f424dc468761889146e5fed, type: 2}
+    - target: {fileID: -1904773615976411169, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
       propertyPath: m_Name
       value: PF_Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
       propertyPath: m_TagString
@@ -111,6 +119,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: be06d9684f424dc468761889146e5fed, type: 2}
+    - target: {fileID: 6430184445393976900, guid: 58765895ec93a104fb248fd3122c687d, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -166,9 +178,13 @@ MonoBehaviour:
   EnemyMaxHP: 3
   EnemyBullet: {fileID: 1667056066566340112, guid: 35eea212aa74672449122d6aa429d948, type: 3}
   ShootCooldown: 2
+  ShootCooldownChangeable: 0
+  moveDirection: {x: 0, y: 0, z: 0}
+  MoveSpeed: 0
   BulletSpawnPoint: {fileID: 5011762179819861786}
   GameManagerScript: {fileID: 0}
   EnemySpawningScript: {fileID: 0}
+  PlayerCharachter: {fileID: 0}
   rb: {fileID: 0}
 --- !u!4 &8950712999040419820 stripped
 Transform:

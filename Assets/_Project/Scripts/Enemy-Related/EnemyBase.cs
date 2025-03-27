@@ -66,14 +66,6 @@ public class EnemyBase : MonoBehaviour
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
 
-        if (collision.gameObject.GetComponent<EnemyBase>())
-        {
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-        }
-        else if (collision.gameObject.GetComponent<EnemyBullet>())
-        {
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-        }
     }
 
     public virtual void OnDeath()

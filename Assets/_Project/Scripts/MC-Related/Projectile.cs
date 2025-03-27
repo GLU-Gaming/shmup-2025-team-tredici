@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = transform.forward * speed;
+        rb.linearVelocity = transform.up * speed;
         Destroy(gameObject, 1f);
     }
 
