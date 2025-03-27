@@ -5,14 +5,20 @@ using UnityEngine.SocialPlatforms.Impl;
 public class HighScore : MonoBehaviour
 {
     private int HighestScore = 0;
+    private int Currentscore;
     [SerializeField] private TextMeshProUGUI Highscore;
 
     void Start()
     {
-        if (GameManager.FinalScore > HighestScore || HighestScore == 0)
+        HighestScore = PlayerPrefs.GetInt("HighestScore", 0);
+        Currentscore =  PlayerPrefs.GetInt("CurrentScore", 0);
+        if (Currentscore > HighestScore)
         {
-            HighestScore = GameManager.FinalScore;
+            HighestScore = Currentscore;
+            PlayerPrefs.SetInt("HighestScore" , HighestScore);
+            PlayerPrefs.Save();
         }
+        
     }
 
     void Update()

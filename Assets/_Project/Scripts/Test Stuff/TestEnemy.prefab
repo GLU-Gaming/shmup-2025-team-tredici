@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fe4f6284ee7894fac141dc641cc490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHP: 0
+  EnemyMaxHP: 1
   EnemyBullet: {fileID: 426933466582610228, guid: a32c64256029b47459ecc3594e28cda0, type: 3}
   ShootCooldown: 2
   ShootCooldownChangeable: 2

@@ -69,7 +69,8 @@ public class EnemyBase : MonoBehaviour
         if (collision.gameObject.GetComponent<EnemyBase>())
         {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-        } else if (collision.gameObject.GetComponent<EnemyBullet>())
+        }
+        else if (collision.gameObject.GetComponent<EnemyBullet>())
         {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
