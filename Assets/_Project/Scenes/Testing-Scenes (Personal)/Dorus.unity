@@ -1799,12 +1799,15 @@ MonoBehaviour:
   EnemyOne: {fileID: 8609900211884973398, guid: 2bb57f49b9bd8d44885cbf9615c5c992, type: 3}
   EnemyTwo: {fileID: 3122067848239484641, guid: 3901e02b2c24796498c5f42fc42164bc, type: 3}
   EnemyThree: {fileID: 4979470203585694942, guid: 20e64f90af5438c4c850e59438d12319, type: 3}
-  EnemyFour: {fileID: 0}
+  EnemyFour: {fileID: 2283439716973220106, guid: e5c890c2bc1714147abf79fd6e62997c, type: 3}
   SpawnInterval: 1
   MaxEnemies: 3
   CurrentEnemies: 0
   CurrentEyes: 0
   CurrentSpiders: 0
+  CurrentSkulls: 0
+  CurrentCoolingCats: 0
+  CurrentSuns: 0
 --- !u!65 &1490928309
 BoxCollider:
   m_ObjectHideFlags: 0

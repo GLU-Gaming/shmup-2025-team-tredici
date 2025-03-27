@@ -19,4 +19,11 @@ public class Skull : EnemyBase
     {
        //n/a
     }
+
+    public override void OnDeath()
+    {
+        EnemySpawningScript.CurrentSkulls -= 1;
+        GameManagerScript.CurrentScore += 1;
+        Destroy(gameObject);
+    }
 }
