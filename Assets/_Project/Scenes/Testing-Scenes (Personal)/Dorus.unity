@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 49
+  CurrentScore: 0
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 1840967153}
   - component: {fileID: 1840967157}
   m_Layer: 0
-  m_Name: CameraIdea2\
+  m_Name: Camera 2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
