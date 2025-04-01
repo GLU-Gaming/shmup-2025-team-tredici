@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 0
+  CurrentScore: 49
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -921,6 +921,7 @@ MonoBehaviour:
   - {fileID: 1926629565}
   - {fileID: 2040802979}
   Bluescreen: {fileID: 2086947660}
+  Smiley: {fileID: 2005203192}
 --- !u!4 &671664643
 Transform:
   m_ObjectHideFlags: 0
@@ -2777,6 +2778,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  Bluescreen: {fileID: 2086947660}
 --- !u!1 &1854977156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,6 +3110,96 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978434108}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2005203191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Name
+      value: SadSmiley
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005203193}
+  m_SourcePrefab: {fileID: 100100000, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+--- !u!1 &2005203192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+  m_PrefabInstance: {fileID: 2005203191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2005203193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005203192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5199819, y: 4.228799, z: 1}
+  m_Center: {x: 1.2599909, y: 0.26281923, z: 0}
 --- !u!1 &2040802979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3496,3 +3588,4 @@ SceneRoots:
   - {fileID: 1854977159}
   - {fileID: 1314543686}
   - {fileID: 400147134}
+  - {fileID: 2005203191}
