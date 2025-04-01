@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject[] Hearts;
     [SerializeField] private GameObject Bluescreen;
     [SerializeField] private GameObject Smiley;
+    [SerializeField] private GameObject Popups;
+    [SerializeField] private GameObject BossbattleProgressbar;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
 
@@ -47,8 +49,11 @@ public class GameManager : MonoBehaviour
         {
             DestroyEnemies();
             ShakeScript.StartShake();
+            Bluescreen.SetActive(true);
             BossBattleActive = true;
+            BossbattleProgressbar.SetActive(true);
             Smiley.SetActive(true);
+            Popups.SetActive(false);
         }
     }
 
