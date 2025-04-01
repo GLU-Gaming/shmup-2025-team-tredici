@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4709923303360919972}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,6 +39,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8708396805832778714, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.47542092
@@ -95,17 +99,37 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9afaa51d38b5eb34ba751a2313559772, type: 2}
+    - target: {fileID: -5471901410102084090, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -5235064353753369388, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9afaa51d38b5eb34ba751a2313559772, type: 2}
+    - target: {fileID: -4819223349682164798, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -4037798191895152097, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9afaa51d38b5eb34ba751a2313559772, type: 2}
+    - target: {fileID: -80090433392757807, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 342729936290184828, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_Name
       value: PF_spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: m_TagString
@@ -115,10 +139,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9afaa51d38b5eb34ba751a2313559772, type: 2}
+    - target: {fileID: 2091731177664272046, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791202992462425313, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5232678550173406901, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9afaa51d38b5eb34ba751a2313559772, type: 2}
+    - target: {fileID: 7326202654806577874, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8056206513001543159, guid: 86bce3001b9487948b78d43238fb589a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -194,6 +230,7 @@ MonoBehaviour:
   EnemyMaxHP: 2
   EnemyBullet: {fileID: 8517618235495227583, guid: dd99f9bfcd6fc86489b0b46c8d76d712, type: 3}
   ShootCooldown: 2
+  ShootCooldownChangeable: 0
   moveDirection: {x: 0, y: 0, z: 0}
   MoveSpeed: 3
   BulletSpawnPoint: {fileID: 4709923303360919972}

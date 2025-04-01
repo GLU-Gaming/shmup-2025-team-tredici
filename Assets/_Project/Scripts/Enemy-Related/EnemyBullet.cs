@@ -20,19 +20,10 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Physics.IgnoreCollision(gameObject.GetComponent<Collider>(), GetComponent<Collider>());
-        }
-        else if (collision.gameObject.CompareTag("Player"))
+         if (collision.gameObject.CompareTag("Player"))
         {
             manager.CurrentLifes -= 1;
             Destroy(gameObject);
-        }
-        else if (collision.gameObject.GetComponent<EnemyBase>())
-        {
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
         else
         {
