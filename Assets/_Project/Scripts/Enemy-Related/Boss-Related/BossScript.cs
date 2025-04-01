@@ -7,7 +7,10 @@ public class BossScript : MonoBehaviour
     private int MaxHealth = 10;
     public int CurrentHealth;
     public GameManager GameManager;
+    [SerializeField] private GameObject eyebrow;
+    [SerializeField] private GameObject Bulletpopup;
 
+    private Vector3 CurrentPosition;
 
     void Start()
     {
@@ -30,16 +33,16 @@ public class BossScript : MonoBehaviour
 
     void AttackOne()
     {
-
+        // popups schieten
     }
 
     void Attacktwo()
     {
-
+        // swoop across screen
     }
 
     void AttackThree()
     {
-
+        // idk
     }
 }

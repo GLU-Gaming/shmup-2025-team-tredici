@@ -911,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 45
+  CurrentScore: 49
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -3340,6 +3340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 0
   GameManager: {fileID: 0}
+  eyebrow: {fileID: 0}
 --- !u!1 &2040802979
 GameObject:
   m_ObjectHideFlags: 0
