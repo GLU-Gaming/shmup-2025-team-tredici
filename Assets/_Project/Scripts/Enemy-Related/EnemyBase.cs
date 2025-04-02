@@ -11,6 +11,7 @@ public class EnemyBase : MonoBehaviour
     public Vector3 moveDirection;
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
+    [SerializeField] public GameObject DeathParticle;
 
 
     public GameManager GameManagerScript;
