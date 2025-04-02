@@ -27,6 +27,7 @@ public class Spider : EnemyBase
 
     public override void OnDeath()
     {
+        Instantiate(DeathParticle , transform.position , transform.rotation);
         EnemySpawningScript.CurrentSpiders -= 1;
         GameManagerScript.CurrentScore += 2;
         Destroy(gameObject);
