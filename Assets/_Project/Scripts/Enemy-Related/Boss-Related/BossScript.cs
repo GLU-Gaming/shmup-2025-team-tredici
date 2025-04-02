@@ -53,6 +53,7 @@ public class BossScript : MonoBehaviour
     void Attacktwo()
     {
         // swoop across screen
+        CurrentPosition = transform.position;
     }
 
     void AttackThree()
