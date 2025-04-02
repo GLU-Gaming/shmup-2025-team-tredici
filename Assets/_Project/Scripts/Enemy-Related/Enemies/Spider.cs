@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,10 +14,11 @@ public class Spider : EnemyBase
         if (PlayerCharachter)
         {
             Vector3 direction = (PlayerCharachter.transform.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;    
-             moveDirection = direction;
+            moveDirection = direction;
+            Quaternion LookDirection = Quaternion.LookRotation(direction, Vector3.back) * Quaternion.AngleAxis(90, Vector3.down);
+            transform.rotation = Quaternion.Slerp(transform.rotation , LookDirection , Time.deltaTime * 1);
         }
-        rb.linearVelocity = new Vector3(moveDirection.x, moveDirection.y) * MoveSpeed;
+        rb.linearVelocity = transform.right * MoveSpeed; //new Vector3(moveDirection.x, moveDirection.y) * MoveSpeed;
     }
     public override void EnemyAttack()
     {

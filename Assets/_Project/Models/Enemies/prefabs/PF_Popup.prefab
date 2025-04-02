@@ -48,13 +48,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5598268341031972085, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3649440258750741942, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7886d3d1e1216b44c894e55838a9c20a, type: 2}
     - target: {fileID: 919132149155446097, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_Name
-      value: pop-up concept
+      value: PF_Popup
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249407182625187598, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5604444445859269563, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
