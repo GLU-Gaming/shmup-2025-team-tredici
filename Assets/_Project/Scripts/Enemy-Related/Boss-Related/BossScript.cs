@@ -46,7 +46,7 @@ public class BossScript : MonoBehaviour
         {
             // spawns bullet
             GameObject Enemyprojectile = Instantiate(Bulletpopup, BulletSpawnPoint.position, transform.rotation);
-            ShootCooldown = 2;
+            ShootCooldown = 1;
         }
     }
 
