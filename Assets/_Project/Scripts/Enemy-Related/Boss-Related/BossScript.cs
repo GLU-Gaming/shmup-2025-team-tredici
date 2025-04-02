@@ -7,8 +7,11 @@ public class BossScript : MonoBehaviour
     private int MaxHealth = 10;
     public int CurrentHealth;
     public GameManager GameManager;
+    public float ShootCooldown = 2;
     [SerializeField] private GameObject eyebrow;
     [SerializeField] private GameObject Bulletpopup;
+    [SerializeField] private GameObject Hands;
+    [SerializeField] private Transform BulletSpawnPoint;
 
     private Vector3 CurrentPosition;
 
@@ -23,17 +26,28 @@ public class BossScript : MonoBehaviour
         {
             SceneManager.LoadScene(4);
         }
+        ShootCooldown = ShootCooldown - Time.deltaTime;
+
+        AttackOne();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        CurrentHealth -= 1;
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            CurrentHealth -= 1;
+        }
     }
 
 
     void AttackOne()
     {
-        // popups schieten
+        if (ShootCooldown <= 0)
+        {
+            // spawns bullet
+            GameObject Enemyprojectile = Instantiate(Bulletpopup, BulletSpawnPoint.position, transform.rotation);
+            ShootCooldown = 2;
+        }
     }
 
     void Attacktwo()

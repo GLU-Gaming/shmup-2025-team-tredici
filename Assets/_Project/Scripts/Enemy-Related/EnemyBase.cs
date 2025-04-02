@@ -65,7 +65,6 @@ public class EnemyBase : MonoBehaviour
         {
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
-
     }
 
     public virtual void OnDeath()

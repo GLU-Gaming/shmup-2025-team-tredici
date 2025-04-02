@@ -191,6 +191,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68290884}
   m_CullTransparentMesh: 1
+--- !u!1 &93872357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93872358}
+  m_Layer: 3
+  m_Name: Bulletspawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93872358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93872357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.26, y: 0.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2005203196}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206857546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 822357553678290178, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1344
@@ -3302,17 +3337,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2864677064856329013, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123444307485861416, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_Name
       value: SadSmiley
       objectReference: {fileID: 0}
     - target: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8709592724896282703, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 93872358}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       insertIndex: -1
@@ -3361,8 +3415,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 0
   GameManager: {fileID: 0}
+  ShootCooldown: 2
   eyebrow: {fileID: 0}
-  Bulletpopup: {fileID: 0}
+  Bulletpopup: {fileID: 7440162778869507686, guid: 0bdde70b7d1e7e946839c4153087c8c3, type: 3}
+  BulletSpawnPoint: {fileID: 93872358}
+--- !u!4 &2005203196 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+  m_PrefabInstance: {fileID: 2005203191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2040802979
 GameObject:
   m_ObjectHideFlags: 0
