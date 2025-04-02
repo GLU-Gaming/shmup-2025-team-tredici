@@ -10,9 +10,11 @@ public class GameManager : MonoBehaviour
     public int CurrentLifes = 3;
     [SerializeField] private GameObject[] Hearts;
     [SerializeField] private GameObject Bluescreen;
+    [SerializeField] private GameObject Smiley;
+    [SerializeField] private GameObject Popups;
+    [SerializeField] private GameObject BossbattleProgressbar;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
-    private bool BluescreenActivated = false;
 
     void Start()
     {
@@ -43,29 +45,15 @@ public class GameManager : MonoBehaviour
         }
 
         //Boss battle start
-        if (CurrentScore >= 50 && BossBattleActive == false && BluescreenActivated == false && Bluescreen.activeSelf == false)
+        if (CurrentScore >= 50 && BossBattleActive == false)
         {
             DestroyEnemies();
-            Bluescreen.SetActive(true);
-        }
-        else if (CurrentScore >= 50 && BluescreenActivated == true)
-        {
-            Bluescreen.SetActive(false);
-            BluescreenActivated = false;
-            BossBattleActive = true;
             ShakeScript.StartShake();
-        }
-
-        if (Bluescreen.activeSelf == true)
-        {
-            int i = 0;
-            i++;
-            if (i >= 10)
-            {
-                BluescreenActivated = true;
-            }
-              
-            
+            Bluescreen.SetActive(true);
+            BossBattleActive = true;
+            BossbattleProgressbar.SetActive(true);
+            Smiley.SetActive(true);
+            Popups.SetActive(false);
         }
     }
 

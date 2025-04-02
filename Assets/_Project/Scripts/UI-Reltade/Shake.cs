@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Shake : MonoBehaviour
@@ -7,10 +8,12 @@ public class Shake : MonoBehaviour
 
     public float duration = 1f;
     public AnimationCurve curve;
+    [SerializeField] private GameObject Bluescreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     IEnumerator Shaking()
     {
+        //Bluescreen.SetActive(true);
         Vector3 startPosition = transform.position;
         float esapsedTime = 0f;
         while (esapsedTime < duration)
@@ -21,7 +24,7 @@ public class Shake : MonoBehaviour
             yield return null;
         }
         transform.position = startPosition;
-
+        //Bluescreen.SetActive(false);
     }
     public void StartShake()
     {

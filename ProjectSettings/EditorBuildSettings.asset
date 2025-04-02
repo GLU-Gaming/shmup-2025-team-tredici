@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Testing-Scenes (Personal)/Dorus.unity
     guid: 21342cc27ec067943937c119a7577d10
+  - enabled: 1
+    path: Assets/_Project/Scenes/Main-Game/Win.unity
+    guid: 66e728a3453c900409fa9a9b92a46d7f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

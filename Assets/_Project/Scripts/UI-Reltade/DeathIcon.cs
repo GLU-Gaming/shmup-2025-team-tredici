@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathIcon : MonoBehaviour
 {
-    public List Icons;
+    [SerializeField] public Array[] List;
 
     void Start()
     {

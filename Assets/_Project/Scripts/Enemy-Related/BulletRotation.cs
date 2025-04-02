@@ -20,5 +20,10 @@ public class BulletRotation : MonoBehaviour
         {
             transform.Rotate(0, 1f, 0);
         }
+
+        if (WhichBullet == "Hills")
+        {
+            transform.Rotate(0, 0, 0.02f);
+        }
     }
 }
