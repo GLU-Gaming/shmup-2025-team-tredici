@@ -43,6 +43,6 @@ public class BossScript : MonoBehaviour
 
     void AttackThree()
     {
-        // idk
+        // hands
     }
 }
