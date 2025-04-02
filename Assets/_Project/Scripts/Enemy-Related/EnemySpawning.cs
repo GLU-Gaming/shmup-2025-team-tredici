@@ -91,7 +91,7 @@ public class EnemySpawning : MonoBehaviour
 
                 if (GameManagerScript.CurrentScore > 29 && CurrentCoolingCats < MaxEnemies - 2)
                 {
-                    RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-11, 7), 0);
+                    RandomPosition = new Vector3(Random.Range(-2, 5), Random.Range(-7, 11), 0);
                     Instantiate(EnemyFive, RandomPosition, EnemyFive.transform.rotation);
                     CurrentCoolingCats += 1;
                 } 

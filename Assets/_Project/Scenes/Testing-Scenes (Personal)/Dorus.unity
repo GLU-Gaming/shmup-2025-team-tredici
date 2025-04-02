@@ -2152,7 +2152,7 @@ MonoBehaviour:
   EnemyTwo: {fileID: 3122067848239484641, guid: 3901e02b2c24796498c5f42fc42164bc, type: 3}
   EnemyThree: {fileID: 4979470203585694942, guid: 20e64f90af5438c4c850e59438d12319, type: 3}
   EnemyFour: {fileID: 2283439716973220106, guid: e5c890c2bc1714147abf79fd6e62997c, type: 3}
-  EnemyFive: {fileID: 9026215996544048329, guid: 1da98aedb97db174796bf17f6d75175b, type: 3}
+  EnemyFive: {fileID: 6751459129760679549, guid: 9d63eace46a917e46a1bb85d88300278, type: 3}
   Pickup_FastShoot: {fileID: 0}
   Pickup_LaserShoot: {fileID: 0}
   Pickup_Shield: {fileID: 0}
@@ -3418,6 +3418,7 @@ MonoBehaviour:
   ShootCooldown: 2
   eyebrow: {fileID: 0}
   Bulletpopup: {fileID: 7440162778869507686, guid: 0bdde70b7d1e7e946839c4153087c8c3, type: 3}
+  Hands: {fileID: 0}
   BulletSpawnPoint: {fileID: 93872358}
 --- !u!4 &2005203196 stripped
 Transform:
