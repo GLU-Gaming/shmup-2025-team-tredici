@@ -65,7 +65,7 @@ public class EnemySpawning : MonoBehaviour
                 }
                 else
                 {
-                    print("Max amount of enemies");
+                    
                 }
 
                 if (GameManagerScript.CurrentScore > 14 && CurrentSpiders < MaxEnemies + 1)

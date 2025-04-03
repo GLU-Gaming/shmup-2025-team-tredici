@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Smiley;
     [SerializeField] private GameObject Popups;
     [SerializeField] private GameObject BossbattleProgressbar;
+    [SerializeField] private GameObject Hills;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
 
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
             BossbattleProgressbar.SetActive(true);
             Smiley.SetActive(true);
             Popups.SetActive(false);
+            Hills.SetActive(false);
         }
     }
 
@@ -61,11 +64,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject[] CurrentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] CurrentBullets = GameObject.FindGameObjectsWithTag("Bullet");
-        foreach (GameObject Enemy in CurrentEnemies)
-            Destroy(Enemy);
-        foreach (GameObject Bullet in CurrentBullets)
-            Destroy(Bullet);
+        foreach (GameObject Enemy in CurrentEnemies) { Destroy(Enemy); }
+        foreach (GameObject Bullet in CurrentBullets) { Destroy(Bullet); }
 
-        ShakeScript.StartShake();
+        //ShakeScript.StartShake();
     }
 }
