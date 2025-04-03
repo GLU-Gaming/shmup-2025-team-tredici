@@ -59,7 +59,7 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<Projectile>())
         {

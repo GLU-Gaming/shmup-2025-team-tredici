@@ -22,4 +22,17 @@ public class CoolingCar : EnemyBase
         Destroy(gameObject);
     }
 
+    public override void OnCollisionEnter(Collision collision)
+    {
+        //print(collision.contacts[0].thisCollider.name);
+
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            if (collision.contacts[0].thisCollider.name.Contains("PF_cooling-car"))
+            {
+                OnDeath();
+            }
+        }
+
+    }
 }
