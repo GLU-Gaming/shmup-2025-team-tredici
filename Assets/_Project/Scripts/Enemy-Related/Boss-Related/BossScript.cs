@@ -14,6 +14,8 @@ public class BossScript : MonoBehaviour
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
     [SerializeField] private Transform BulletSpawnPoint;
+    private int SwoopSpeed = 6;
+    private bool IsAttackTwoActive = false;
 
     private Vector3 CurrentPosition;
 
@@ -31,7 +33,8 @@ public class BossScript : MonoBehaviour
         }
         ShootCooldown = ShootCooldown - Time.deltaTime;
 
-        AttackOne();
+        //AttackOne();
+        Attacktwo();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,6 +43,11 @@ public class BossScript : MonoBehaviour
         {
             CurrentHealth -= 1;
         }
+
+        if (collision.gameObject.tag == "Border_Walls" && IsAttackTwoActive == true)
+        {
+            rb.transform.position = CurrentPosition;
+        };
     }
 
 
@@ -51,14 +59,18 @@ public class BossScript : MonoBehaviour
             GameObject Enemyprojectile = Instantiate(Bulletpopup, BulletSpawnPoint.position, transform.rotation);
             ShootCooldown = 1;
         }
+
+
     }
 
     void Attacktwo()
     {
         // swoop across screen
+        IsAttackTwoActive = true;
         CurrentPosition = transform.position;
-        rb.AddRelativeForce (new Vector3(Random.Range(-2, 5), Random.Range(-7, 11), 0));
-        transform.position = CurrentPosition;
+        rb.AddRelativeForce (new Vector3(Random.Range(-23, 20), Random.Range(-8, 11), 0) * SwoopSpeed);
+
+
     }
 
     void AttackThree()

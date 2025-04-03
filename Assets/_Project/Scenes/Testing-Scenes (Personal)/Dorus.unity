@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 22c757c9c811b324ebbbf5b5f4c994a7, type: 3}
+  m_Texture: {fileID: 2800000, guid: 30c2de88973217e42835d92c2a17cb48, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -457,7 +457,6 @@ GameObject:
   m_Component:
   - component: {fileID: 142247026}
   - component: {fileID: 142247025}
-  - component: {fileID: 142247024}
   - component: {fileID: 142247023}
   - component: {fileID: 142247027}
   m_Layer: 0
@@ -511,14 +510,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &142247024
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142247022}
-  m_Enabled: 1
 --- !u!20 &142247025
 Camera:
   m_ObjectHideFlags: 0
@@ -637,7 +628,7 @@ GameObject:
   - component: {fileID: 206857547}
   m_Layer: 0
   m_Name: testTaskbar
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,7 +797,7 @@ GameObject:
   - component: {fileID: 323241720}
   m_Layer: 0
   m_Name: Topbar
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,7 +1162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b87d7806dc8e34945bce9075dc3b2aae, type: 3}
+  m_Texture: {fileID: 2800000, guid: fc45bbd136c249e489f2ba67af68c367, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1200,7 +1191,7 @@ GameObject:
   - component: {fileID: 418070517}
   m_Layer: 0
   m_Name: RightBar
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1781,7 +1772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 22c757c9c811b324ebbbf5b5f4c994a7, type: 3}
+  m_Texture: {fileID: 2800000, guid: 30c2de88973217e42835d92c2a17cb48, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2130,7 +2121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 592943901778803206, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.030624447
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 592943901778803206, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2394,7 +2385,7 @@ GameObject:
   - component: {fileID: 1362694064}
   m_Layer: 0
   m_Name: Bottombar
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2656,7 +2647,7 @@ GameObject:
   - component: {fileID: 1490928308}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3276,7 +3267,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 22c757c9c811b324ebbbf5b5f4c994a7, type: 3}
+  m_Texture: {fileID: 2800000, guid: 30c2de88973217e42835d92c2a17cb48, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3603,7 +3594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b87d7806dc8e34945bce9075dc3b2aae, type: 3}
+  m_Texture: {fileID: 2800000, guid: fc45bbd136c249e489f2ba67af68c367, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3704,7 +3695,7 @@ GameObject:
   - component: {fileID: 1978434110}
   m_Layer: 0
   m_Name: LeftBar
-  m_TagString: Untagged
+  m_TagString: Border_Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3824,11 +3815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.97
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.1618
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3899,6 +3890,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2005203195}
+    - targetCorrespondingSourceObject: {fileID: 7505755073570477442, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005203197}
   m_SourcePrefab: {fileID: 100100000, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
 --- !u!1 &2005203192 stripped
 GameObject:
@@ -3950,6 +3944,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}
   m_PrefabInstance: {fileID: 2005203191}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2005203197
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005203192}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2040802979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,7 +4028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b87d7806dc8e34945bce9075dc3b2aae, type: 3}
+  m_Texture: {fileID: 2800000, guid: fc45bbd136c249e489f2ba67af68c367, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
