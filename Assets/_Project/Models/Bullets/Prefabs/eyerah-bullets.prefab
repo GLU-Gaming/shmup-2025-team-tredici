@@ -224,6 +224,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34ed38f017353f7428fd821d2043c62a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4585092044176931254}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34ed38f017353f7428fd821d2043c62a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7571338221820057343}
   m_SourcePrefab: {fileID: 100100000, guid: 34ed38f017353f7428fd821d2043c62a, type: 3}
 --- !u!1 &426933466582610228 stripped
 GameObject:
@@ -303,6 +306,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WhichBullet: Eye
+--- !u!114 &7571338221820057343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426933466582610228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe8a400cfbdca046bc4101f5f071331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 2368213203310048287, guid: 0e18552684200994d9590149571eeaef, type: 3}
 --- !u!4 &1055835818801867662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 34ed38f017353f7428fd821d2043c62a, type: 3}
