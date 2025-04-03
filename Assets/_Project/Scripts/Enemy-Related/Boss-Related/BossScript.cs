@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -14,8 +15,11 @@ public class BossScript : MonoBehaviour
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
     [SerializeField] private Transform BulletSpawnPoint;
+    [SerializeField] private GameObject AttackTwoPopUp;
+    private int SwoopSpeed = 10;
+    private bool IsAttackTwoActive = false;
 
-    private Vector3 CurrentPosition;
+    private Vector3 ReturnAttackTwoPosition= new Vector3 (15, 0, 0);
 
     void Start()
     {
@@ -31,7 +35,17 @@ public class BossScript : MonoBehaviour
         }
         ShootCooldown = ShootCooldown - Time.deltaTime;
 
-        AttackOne();
+        if (IsAttackTwoActive == true)
+        {
+            AttackTwoPopUp.SetActive(true);
+        }
+        else
+        {
+            AttackTwoPopUp.SetActive(false);
+        }
+
+        //AttackOne();
+        Attacktwo();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,6 +54,13 @@ public class BossScript : MonoBehaviour
         {
             CurrentHealth -= 1;
         }
+
+        if (collision.gameObject.CompareTag("Border_Walls") && IsAttackTwoActive == true)
+        {
+            print("touched wall");
+            //rb.AddRelativeForce  (new Vector3(transform.position.x - ReturnAttackTwoPosition.x , transform.position.y - ReturnAttackTwoPosition.y , 0) * SwoopSpeed);
+            transform.position = new Vector3 (15, 0, 0);
+        };
     }
 
 
@@ -51,14 +72,16 @@ public class BossScript : MonoBehaviour
             GameObject Enemyprojectile = Instantiate(Bulletpopup, BulletSpawnPoint.position, transform.rotation);
             ShootCooldown = 1;
         }
+
+
     }
 
     void Attacktwo()
     {
         // swoop across screen
-        CurrentPosition = transform.position;
-        rb.AddRelativeForce (new Vector3(Random.Range(-2, 5), Random.Range(-7, 11), 0));
-        transform.position = CurrentPosition;
+        IsAttackTwoActive = true;
+
+            rb.AddRelativeForce(new Vector3(Random.Range(-23, 20), Random.Range(-8, 11), 0) * SwoopSpeed);
     }
 
     void AttackThree()

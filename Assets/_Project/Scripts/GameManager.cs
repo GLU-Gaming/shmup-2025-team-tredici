@@ -66,7 +66,5 @@ public class GameManager : MonoBehaviour
         GameObject[] CurrentBullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject Enemy in CurrentEnemies) { Destroy(Enemy); }
         foreach (GameObject Bullet in CurrentBullets) { Destroy(Bullet); }
-
-        //ShakeScript.StartShake();
     }
 }
