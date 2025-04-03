@@ -23,6 +23,6 @@ public class HighScore : MonoBehaviour
 
     void Update()
     {
-        Highscore.text = "score:" + HighestScore;
+        Highscore.text = "Highscore:" + HighestScore;
     }
 }
