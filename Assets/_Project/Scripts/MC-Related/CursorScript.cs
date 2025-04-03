@@ -5,6 +5,7 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] public float MCSpeed;
     [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject hitParticle;
     GameManager gameManager;
 
     void Start()
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
+            Instantiate(hitParticle, rb.transform);
         }
 
         if (collision.gameObject.CompareTag("Boss"))
