@@ -16,7 +16,7 @@ public class BossScript : MonoBehaviour
     [SerializeField] private GameObject Hands;
     [SerializeField] private Transform BulletSpawnPoint;
     [SerializeField] private GameObject AttackTwoPopUp;
-    private int SwoopSpeed = 10;
+    private int SwoopSpeed = 6;
     private bool IsAttackTwoActive = false;
 
     private Vector3 ReturnAttackTwoPosition= new Vector3 (15, 0, 0);
@@ -81,7 +81,7 @@ public class BossScript : MonoBehaviour
         // swoop across screen
         IsAttackTwoActive = true;
 
-            rb.AddRelativeForce(new Vector3(Random.Range(-23, 20), Random.Range(-8, 11), 0) * SwoopSpeed);
+            rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), Random.Range(-7, 9), 0) * SwoopSpeed);
     }
 
     void AttackThree()
