@@ -19,7 +19,7 @@ public class BossScript : MonoBehaviour
     private int SwoopSpeed = 6;
     private bool IsAttackTwoActive = false;
 
-    private Vector3 ReturnAttackTwoPosition= new Vector3 (15, 0, 0);
+    private Vector3 ReturnAttackTwoPosition = new Vector3(15, 0, 0);
 
     void Start()
     {
@@ -45,7 +45,8 @@ public class BossScript : MonoBehaviour
         }
 
         //AttackOne();
-        Attacktwo();
+        //Attacktwo();
+        AttackThree();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,7 +60,7 @@ public class BossScript : MonoBehaviour
         {
             print("touched wall");
             //rb.AddRelativeForce  (new Vector3(transform.position.x - ReturnAttackTwoPosition.x , transform.position.y - ReturnAttackTwoPosition.y , 0) * SwoopSpeed);
-            transform.position = new Vector3 (15, 0, 0);
+            transform.position = new Vector3(15, 0, 0);
         };
     }
 
@@ -80,12 +81,13 @@ public class BossScript : MonoBehaviour
     {
         // swoop across screen
         IsAttackTwoActive = true;
-
-            rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), Random.Range(-7, 9), 0) * SwoopSpeed);
+        rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), Random.Range(-7, 9), 0) * SwoopSpeed);
     }
 
     void AttackThree()
     {
         // hands
+        transform.position = new Vector3 (3,8,0);
+        Hands.SetActive(true);
     }
 }
