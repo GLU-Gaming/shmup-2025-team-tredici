@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -14,10 +15,11 @@ public class BossScript : MonoBehaviour
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
     [SerializeField] private Transform BulletSpawnPoint;
-    private int SwoopSpeed = 6;
+    [SerializeField] private GameObject AttackTwoPopUp;
+    private int SwoopSpeed = 10;
     private bool IsAttackTwoActive = false;
 
-    private Vector3 CurrentPosition;
+    private Vector3 ReturnAttackTwoPosition= new Vector3 (15, 0, 0);
 
     void Start()
     {
@@ -33,6 +35,15 @@ public class BossScript : MonoBehaviour
         }
         ShootCooldown = ShootCooldown - Time.deltaTime;
 
+        if (IsAttackTwoActive == true)
+        {
+            AttackTwoPopUp.SetActive(true);
+        }
+        else
+        {
+            AttackTwoPopUp.SetActive(false);
+        }
+
         //AttackOne();
         Attacktwo();
     }
@@ -44,9 +55,11 @@ public class BossScript : MonoBehaviour
             CurrentHealth -= 1;
         }
 
-        if (collision.gameObject.tag == "Border_Walls" && IsAttackTwoActive == true)
+        if (collision.gameObject.CompareTag("Border_Walls") && IsAttackTwoActive == true)
         {
-            rb.transform.position = CurrentPosition;
+            print("touched wall");
+            //rb.AddRelativeForce  (new Vector3(transform.position.x - ReturnAttackTwoPosition.x , transform.position.y - ReturnAttackTwoPosition.y , 0) * SwoopSpeed);
+            transform.position = new Vector3 (15, 0, 0);
         };
     }
 
@@ -67,10 +80,8 @@ public class BossScript : MonoBehaviour
     {
         // swoop across screen
         IsAttackTwoActive = true;
-        CurrentPosition = transform.position;
-        rb.AddRelativeForce (new Vector3(Random.Range(-23, 20), Random.Range(-8, 11), 0) * SwoopSpeed);
 
-
+            rb.AddRelativeForce(new Vector3(Random.Range(-23, 20), Random.Range(-8, 11), 0) * SwoopSpeed);
     }
 
     void AttackThree()
