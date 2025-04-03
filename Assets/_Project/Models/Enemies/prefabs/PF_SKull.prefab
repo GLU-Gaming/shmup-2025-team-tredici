@@ -231,6 +231,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 0}
   MoveSpeed: 2
   BulletSpawnPoint: {fileID: 238451820084667942}
+  DeathParticle: {fileID: 8364113804441385849, guid: 380c8b681b1e17f4aacf584d30186d7a, type: 3}
   GameManagerScript: {fileID: 0}
   EnemySpawningScript: {fileID: 0}
   PlayerCharachter: {fileID: 0}
