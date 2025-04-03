@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Main-Game/Win.unity
     guid: 66e728a3453c900409fa9a9b92a46d7f
+  - enabled: 1
+    path: Assets/_Project/Scenes/Main-Game/SFX credits.unity
+    guid: 42af1c3d09dbb5f46bdd9b291d0e09e0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
