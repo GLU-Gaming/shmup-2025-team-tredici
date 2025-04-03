@@ -11,6 +11,7 @@ public class EnemyBase : MonoBehaviour
     public Vector3 moveDirection;
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
+    [SerializeField] public GameObject DeathParticle;
 
 
     public GameManager GameManagerScript;
@@ -34,7 +35,6 @@ public class EnemyBase : MonoBehaviour
     void Update()
     {
         EnemyMovement();
-        BulletSpawnPoint.transform.LookAt(PlayerCharachter.transform);
         EnemyAttack();
         // It dies when HP reaches 0
         if (EnemyCurrentHP == 0)
@@ -65,7 +65,6 @@ public class EnemyBase : MonoBehaviour
         {
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
-
     }
 
     public virtual void OnDeath()

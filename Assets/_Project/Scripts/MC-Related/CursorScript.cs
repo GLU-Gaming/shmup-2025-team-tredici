@@ -46,5 +46,10 @@ public class Movement : MonoBehaviour
         {
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
         }
+
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
+        }
     }
 }

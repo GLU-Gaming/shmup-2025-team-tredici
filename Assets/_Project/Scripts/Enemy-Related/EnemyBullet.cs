@@ -20,7 +20,7 @@ public class EnemyBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-         if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             manager.CurrentLifes -= 1;
             Destroy(gameObject);

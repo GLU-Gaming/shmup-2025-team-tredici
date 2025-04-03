@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
@@ -10,9 +11,12 @@ public class GameManager : MonoBehaviour
     public int CurrentLifes = 3;
     [SerializeField] private GameObject[] Hearts;
     [SerializeField] private GameObject Bluescreen;
+    [SerializeField] private GameObject Smiley;
+    [SerializeField] private GameObject Popups;
+    [SerializeField] private GameObject BossbattleProgressbar;
+    [SerializeField] private GameObject Hills;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
-    private bool BluescreenActivated = false;
 
     void Start()
     {
@@ -43,35 +47,24 @@ public class GameManager : MonoBehaviour
         }
 
         //Boss battle start
-        if (CurrentScore >= 50 && BossBattleActive == false && BluescreenActivated == false)
+        if (CurrentScore >= 50 && BossBattleActive == false)
         {
             DestroyEnemies();
+            ShakeScript.StartShake();
             Bluescreen.SetActive(true);
-        }
-        else if (CurrentScore >= 50 && BluescreenActivated == true)
-        {
-            Bluescreen.SetActive(false);
-            BluescreenActivated = false;
             BossBattleActive = true;
+            BossbattleProgressbar.SetActive(true);
+            Smiley.SetActive(true);
+            Popups.SetActive(false);
+            Hills.SetActive(false);
         }
-
-        //if (Bluescreen.activeSelf == true)
-        //{
-        //    while ( ){
-
-        //    }
-        //}
     }
 
     private void DestroyEnemies()
     {
         GameObject[] CurrentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] CurrentBullets = GameObject.FindGameObjectsWithTag("Bullet");
-        foreach (GameObject Enemy in CurrentEnemies)
-            Destroy(Enemy);
-        foreach (GameObject Bullet in CurrentBullets)
-            Destroy(Bullet);
-
-        ShakeScript.StartShake();
+        foreach (GameObject Enemy in CurrentEnemies) { Destroy(Enemy); }
+        foreach (GameObject Bullet in CurrentBullets) { Destroy(Bullet); }
     }
 }
