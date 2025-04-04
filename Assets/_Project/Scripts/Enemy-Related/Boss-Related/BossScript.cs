@@ -1,16 +1,17 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.PlayerSettings;
 using Random = UnityEngine.Random;
 
 public class BossScript : MonoBehaviour
 {
 
-    private int MaxHealth = 10;
+    private int MaxHealth = 100;
     public int CurrentHealth;
     public GameManager GameManager;
     private Rigidbody rb;
-    public float ShootCooldown = 0.1f;
+    public float ShootCooldown = 0.5f;
     [SerializeField] private GameObject eyebrow;
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
@@ -72,6 +73,8 @@ public class BossScript : MonoBehaviour
         if (RandomAttack == 1)
         {
             AttackOne();
+           Vector3 pos = transform.position;
+            transform.position = new Vector3(Mathf.Sin(Time.time) * 15, pos.y, pos.z);
         }
         else if (RandomAttack == 2)
         {
@@ -110,7 +113,7 @@ public class BossScript : MonoBehaviour
         {
             // spawns bullet
             GameObject Enemyprojectile = Instantiate(Bulletpopup, BulletSpawnPoint.position, transform.rotation);
-            ShootCooldown = 0.1f;
+            ShootCooldown = 0.5f;
         }
 
 
