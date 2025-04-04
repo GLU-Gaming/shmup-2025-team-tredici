@@ -10,7 +10,7 @@ public class BossScript : MonoBehaviour
     public int CurrentHealth;
     public GameManager GameManager;
     private Rigidbody rb;
-    public float ShootCooldown = 0.1f ;
+    public float ShootCooldown = 0.1f;
     [SerializeField] private GameObject eyebrow;
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
@@ -81,6 +81,10 @@ public class BossScript : MonoBehaviour
         {
             AttackThree();
         }
+        else
+        {
+            print("RandomAttack error");
+        }
 
 
     }
@@ -95,7 +99,7 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Border_Walls") && IsAttackTwoActive == true)
         {
             //rb.AddRelativeForce  (new Vector3(transform.position.x - ReturnAttackTwoPosition.x , transform.position.y - ReturnAttackTwoPosition.y , 0) * SwoopSpeed);
-            transform.position = new Vector3(15, 0, 0);
+            transform.position = new Vector3(15, Random.Range(-5, 9), 0);
         };
     }
 
@@ -116,7 +120,8 @@ public class BossScript : MonoBehaviour
     {
         // swoop across screen
         IsAttackTwoActive = true;
-        rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), Random.Range(-7, 9), 0) * SwoopSpeed);
+        rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), 0, 0) * SwoopSpeed);
+        //Random.Range(-7, 9)
     }
 
     void AttackThree()
