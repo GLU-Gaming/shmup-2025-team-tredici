@@ -27,15 +27,17 @@ public class Movement : MonoBehaviour
         if (Input.GetAxis("Vertical") > 0)
         {
             rb.AddRelativeForce(new Vector3(0, MCSpeed, 0));
-        } else if (Input.GetAxis("Vertical") < 0)
+        }
+        else if (Input.GetAxis("Vertical") < 0)
         {
             rb.AddRelativeForce(0, -MCSpeed, 0);
         }
 
-        if(Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0)
         {
             rb.AddRelativeForce(new Vector3(0, 0, MCSpeed));
-        } else if (Input.GetAxis("Horizontal") < 0)
+        }
+        else if (Input.GetAxis("Horizontal") < 0)
         {
             rb.AddRelativeForce(0, 0, -MCSpeed);
         }
