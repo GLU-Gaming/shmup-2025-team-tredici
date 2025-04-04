@@ -1258,6 +1258,8 @@ MonoBehaviour:
   Popups: {fileID: 400147133}
   BossbattleProgressbar: {fileID: 433126889}
   Hills: {fileID: 668996965}
+  NormalBGMusic: {fileID: 973118843}
+  BossBGMusic: {fileID: 1198500419}
 --- !u!4 &671664643
 Transform:
   m_ObjectHideFlags: 0
