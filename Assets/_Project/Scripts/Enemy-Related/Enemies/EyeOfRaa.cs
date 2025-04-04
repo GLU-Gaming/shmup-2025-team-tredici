@@ -19,6 +19,7 @@ public class EyeOfRaa : EnemyBase
 
     public override void OnDeath()
     {
+        Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentEyes -= 1;
         GameManagerScript.CurrentScore += 3;
         Destroy(gameObject);

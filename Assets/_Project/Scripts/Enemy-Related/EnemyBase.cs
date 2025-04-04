@@ -70,6 +70,7 @@ public class EnemyBase : MonoBehaviour
     public virtual void OnDeath()
     {
         //This is what happends when the enemy dies
+        Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentEnemies -= 1;
         GameManagerScript.CurrentScore += 1;
         Destroy(gameObject);
