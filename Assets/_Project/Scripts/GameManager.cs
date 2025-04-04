@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Popups;
     [SerializeField] private GameObject BossbattleProgressbar;
     [SerializeField] private GameObject Hills;
+    [SerializeField] private GameObject NormalBGMusic;
+    [SerializeField] private GameObject BossBGMusic;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
 
@@ -52,6 +54,8 @@ public class GameManager : MonoBehaviour
             DestroyEnemies();
             ShakeScript.StartShake();
             Bluescreen.SetActive(true);
+            NormalBGMusic.SetActive(false);
+            BossBGMusic.SetActive(true);
             BossBattleActive = true;
             BossbattleProgressbar.SetActive(true);
             Smiley.SetActive(true);
