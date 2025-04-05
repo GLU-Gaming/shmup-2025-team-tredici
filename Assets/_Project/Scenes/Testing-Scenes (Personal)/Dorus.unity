@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 49
+  CurrentScore: 0
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -1754,8 +1754,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a210f31eff76d6642a9549983a80b4a6, type: 3}
-  m_Resource: {fileID: 8300000, guid: a210f31eff76d6642a9549983a80b4a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e10f2b9afd554ec4d91ccd631053f46b, type: 3}
+  m_Resource: {fileID: 8300000, guid: e10f2b9afd554ec4d91ccd631053f46b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2508,12 +2508,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 60b7d35e0f2ffda409b2b74fa21f3bba, type: 3}
+  m_Resource: {fileID: 8300000, guid: 60b7d35e0f2ffda409b2b74fa21f3bba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

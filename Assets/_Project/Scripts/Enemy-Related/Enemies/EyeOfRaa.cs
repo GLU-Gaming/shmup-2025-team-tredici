@@ -19,6 +19,7 @@ public class EyeOfRaa : EnemyBase
 
     public override void OnDeath()
     {
+        Audio.Stop();
         Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentEyes -= 1;
         GameManagerScript.CurrentScore += 3;

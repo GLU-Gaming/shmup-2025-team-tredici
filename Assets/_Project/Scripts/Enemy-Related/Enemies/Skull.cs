@@ -22,6 +22,7 @@ public class Skull : EnemyBase
 
     public override void OnDeath()
     {
+        Audio.Stop(); ;
         Instantiate(DeathParticle, transform.position , transform.rotation);
         EnemySpawningScript.CurrentSkulls -= 1;
         GameManagerScript.CurrentScore += 1;

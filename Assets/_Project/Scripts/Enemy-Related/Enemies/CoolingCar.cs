@@ -17,6 +17,7 @@ public class CoolingCar : EnemyBase
 
     public override void OnDeath()
     {
+        Audio.Stop();
         Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentCoolingCats -= 1;
         GameManagerScript.CurrentScore += 1;

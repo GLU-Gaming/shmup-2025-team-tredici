@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
     [SerializeField] public GameObject DeathParticle;
+    [SerializeField] public GameObject DeathAudio;
+    public AudioSource Audio;
 
 
     public GameManager GameManagerScript;
@@ -25,6 +28,7 @@ public class EnemyBase : MonoBehaviour
         // Sets stuff and finds stuff for/to the enemy
         ShootCooldown = ShootCooldownChangeable;
         EnemyprojectileRigidBody = EnemyBullet.GetComponent<Rigidbody>();
+        Audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         PlayerCharachter = GameObject.FindWithTag("Player");
         GameManagerScript = FindFirstObjectByType<GameManager>();
@@ -63,6 +67,7 @@ public class EnemyBase : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Projectile>())
         {
+            Audio.Play();
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
     }
@@ -70,6 +75,8 @@ public class EnemyBase : MonoBehaviour
     public virtual void OnDeath()
     {
         //This is what happends when the enemy dies
+        Audio.Stop();
+        DeathAudio.SetActive(true);
         Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentEnemies -= 1;
         GameManagerScript.CurrentScore += 1;
