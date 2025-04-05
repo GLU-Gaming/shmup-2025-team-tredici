@@ -13,7 +13,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] public float MoveSpeed;
     [SerializeField] private Transform BulletSpawnPoint;
     [SerializeField] public GameObject DeathParticle;
-    [SerializeField] public GameObject DeathAudio;
+    [SerializeField] public AudioClip DeathAudio;
+    [SerializeField] public AudioClip HitAudio;
     public AudioSource Audio;
 
 
@@ -67,7 +68,7 @@ public class EnemyBase : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Projectile>())
         {
-            Audio.Play();
+            Audio.PlayOneShot(HitAudio);
             EnemyCurrentHP = EnemyCurrentHP - 1;
         }
     }
@@ -75,8 +76,7 @@ public class EnemyBase : MonoBehaviour
     public virtual void OnDeath()
     {
         //This is what happends when the enemy dies
-        Audio.Stop();
-        DeathAudio.SetActive(true);
+        Audio.PlayOneShot(DeathAudio);
         Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentEnemies -= 1;
         GameManagerScript.CurrentScore += 1;
