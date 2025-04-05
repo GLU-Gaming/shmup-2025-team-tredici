@@ -9,9 +9,11 @@ public class Movement : MonoBehaviour
     [SerializeField] GameObject hitParticle;
     [SerializeField] GameObject ShootParticle;
     GameManager gameManager;
+    AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         gameManager = FindFirstObjectByType<GameManager>();
     }
@@ -50,18 +52,21 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            audioSource.Play();
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
             Instantiate(hitParticle, rb.transform);
         }
 
         if (collision.gameObject.CompareTag("Boss"))
         {
+            audioSource.Play();
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
-                        Instantiate(hitParticle, rb.transform);
+            Instantiate(hitParticle, rb.transform);
         }
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            audioSource.Play();
             Instantiate(hitParticle, rb.transform);
         }
     }
