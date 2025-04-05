@@ -42,7 +42,7 @@ public class EnemyBase : MonoBehaviour
         EnemyMovement();
         EnemyAttack();
         // It dies when HP reaches 0
-        if (EnemyCurrentHP == 0)
+        if (EnemyCurrentHP <= 0)
         {
             OnDeath();
         }
