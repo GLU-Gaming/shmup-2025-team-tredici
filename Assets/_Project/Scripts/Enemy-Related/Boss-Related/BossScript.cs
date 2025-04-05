@@ -124,7 +124,6 @@ public class BossScript : MonoBehaviour
         // swoop across screen
         IsAttackTwoActive = true;
         rb.AddRelativeForce(new Vector3(Random.Range(-23, 19), 0, 0) * SwoopSpeed);
-        //Random.Range(-7, 9)
     }
 
     void AttackThree()

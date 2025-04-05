@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -6,6 +7,7 @@ public class Movement : MonoBehaviour
     [SerializeField] public float MCSpeed;
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject hitParticle;
+    [SerializeField] GameObject ShootParticle;
     GameManager gameManager;
 
     void Start()
@@ -19,6 +21,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
+            Instantiate(ShootParticle, rb.transform);
         }
     }
 
@@ -54,6 +57,12 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Boss"))
         {
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
+                        Instantiate(hitParticle, rb.transform);
+        }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Instantiate(hitParticle, rb.transform);
         }
     }
 }
