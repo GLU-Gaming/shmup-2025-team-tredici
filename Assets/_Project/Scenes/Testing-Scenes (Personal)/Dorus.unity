@@ -2830,25 +2830,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814634b14a4514b43afa57727c2c2bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.9
+  duration: 0.05
   curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
+      time: 0.08064476
+      value: 0.070298076
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
