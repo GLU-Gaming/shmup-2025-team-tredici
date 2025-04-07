@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject hitParticle;
     [SerializeField] GameObject ShootParticle;
+    private Shake2 ShakeScript;
+    private Shake3 ShakeScript3;
     GameManager gameManager;
     AudioSource audioSource;
 
@@ -16,15 +18,19 @@ public class Movement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         gameManager = FindFirstObjectByType<GameManager>();
+        ShakeScript = FindFirstObjectByType<Shake2>();
+        ShakeScript3 = FindAnyObjectByType<Shake3>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            ShakeScript3.StartShake();
             GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
             Instantiate(ShootParticle, rb.transform);
         }
+        //|| Physics.queriesHitTriggers for ehh wip attack idk
     }
 
     private void FixedUpdate()
@@ -52,6 +58,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            ShakeScript.StartShake2();
             audioSource.Play();
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
             Instantiate(hitParticle, rb.transform);
@@ -59,6 +66,7 @@ public class Movement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Boss"))
         {
+            ShakeScript.StartShake2();
             audioSource.Play();
             gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
             Instantiate(hitParticle, rb.transform);
@@ -66,6 +74,7 @@ public class Movement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            ShakeScript.StartShake2();
             audioSource.Play();
             Instantiate(hitParticle, rb.transform);
         }
