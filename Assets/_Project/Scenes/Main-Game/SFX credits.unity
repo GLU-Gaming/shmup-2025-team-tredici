@@ -336,8 +336,8 @@ RectTransform:
   m_Children:
   - {fileID: 458028780}
   - {fileID: 1625690645}
-  - {fileID: 1303576280}
   - {fileID: 826563197}
+  - {fileID: 1303576280}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d93a433482c8c44fa814d72043f2d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Menu
+  SceneName: Credits
 --- !u!114 &1303576282
 MonoBehaviour:
   m_ObjectHideFlags: 0
