@@ -3116,7 +3116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MCSpeed: 50
-  Bullet: {fileID: 8047712536810639845, guid: 832e2020bfe5ff14698fc0922379a99e, type: 3}
+  Bullet: {fileID: 3752691582674075364, guid: 3ed08651d831e3c47957a702bbef7bfe, type: 3}
   hitParticle: {fileID: 957743843180903949, guid: d26a875383e481647a2618eb0d4f089e, type: 3}
   ShootParticle: {fileID: 1236617528229027519, guid: 16912107a0b91b441b9d9888d25d4133, type: 3}
 --- !u!54 &1463780843
@@ -3156,8 +3156,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d48fa352233d1174d8f1e010c3a146ef, type: 3}
-  m_Resource: {fileID: 8300000, guid: d48fa352233d1174d8f1e010c3a146ef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d01c813a0b1077b419f6ed9f997bd3fe, type: 3}
+  m_Resource: {fileID: 8300000, guid: d01c813a0b1077b419f6ed9f997bd3fe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
