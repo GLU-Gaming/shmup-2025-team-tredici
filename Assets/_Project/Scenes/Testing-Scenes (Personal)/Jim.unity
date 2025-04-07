@@ -590,6 +590,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2aa3f32ea8a7a274eab9466095f7d7b3, type: 2}
     - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: ShapeModule.type
       value: 19
       objectReference: {fileID: 0}
@@ -6517,6 +6521,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 2aa3f32ea8a7a274eab9466095f7d7b3, type: 2}
+    - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: ShapeModule.type
       value: 19
@@ -16895,7 +16903,7 @@ Transform:
   m_GameObject: {fileID: 1350128540}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50227517, y: -0.18570335, z: -0.5086603, w: 0.67416525}
-  m_LocalPosition: {x: 6.0579996, y: -2.047, z: -2.568}
+  m_LocalPosition: {x: 6.0279994, y: -2.0879998, z: -2.5679998}
   m_LocalScale: {x: 223.00003, y: 223.00002, z: 223}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17026,15 +17034,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b9ca28ce8bac654458c8604140ffd6e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.029
+      value: 5.9989996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9ca28ce8bac654458c8604140ffd6e0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.70000005
+      value: -0.74100006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9ca28ce8bac654458c8604140ffd6e0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.54
+      value: -2.5399997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b9ca28ce8bac654458c8604140ffd6e0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17565,7 +17573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6267270026924154055, guid: 9d63eace46a917e46a1bb85d88300278, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.03
+      value: 16.43
       objectReference: {fileID: 0}
     - target: {fileID: 6267270026924154055, guid: 9d63eace46a917e46a1bb85d88300278, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17657,11 +17665,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5060326829772500748, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00368
+      value: -0.00398
       objectReference: {fileID: 0}
     - target: {fileID: 5060326829772500748, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00016
+      value: 0.00009
       objectReference: {fileID: 0}
     - target: {fileID: 5060326829772500748, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17706,7 +17714,11 @@ PrefabInstance:
     - target: {fileID: 8134202943999930596, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2aa3f32ea8a7a274eab9466095f7d7b3, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: ShapeModule.type
       value: 19
@@ -17742,6 +17754,10 @@ PrefabInstance:
     - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: EmissionModule.m_BurstCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8534253725331562305, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
       propertyPath: InheritVelocityModule.enabled
