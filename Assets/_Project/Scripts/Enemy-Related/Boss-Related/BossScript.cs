@@ -30,7 +30,7 @@ public class BossScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         CurrentHealth = MaxHealth;
-        RandomAttack = Random.Range(1, 3);
+        RandomAttack = Random.Range(1, 2);
     }
 
     void Update()
@@ -66,7 +66,12 @@ public class BossScript : MonoBehaviour
         {
             print("Apple");
             DisableOtherAttacks();
-            RandomAttack = Random.Range(1, 3);
+            if (RandomAttack == 1)
+            {
+                RandomAttack = 2;
+            } else if (RandomAttack == 2) {
+                RandomAttack = 1;
+            }
             Waittime -= Interval;
         }
 
