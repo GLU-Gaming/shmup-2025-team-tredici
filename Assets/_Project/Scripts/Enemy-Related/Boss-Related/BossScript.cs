@@ -11,7 +11,7 @@ public class BossScript : MonoBehaviour
     public int CurrentHealth;
     public GameManager GameManager;
     private Rigidbody rb;
-    public float ShootCooldown = 0.5f;
+    public float ShootCooldown = 0.3f;
     [SerializeField] private GameObject eyebrow;
     [SerializeField] private GameObject Bulletpopup;
     [SerializeField] private GameObject Hands;
