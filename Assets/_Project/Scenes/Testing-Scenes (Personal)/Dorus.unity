@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 48
+  CurrentScore: 0
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
