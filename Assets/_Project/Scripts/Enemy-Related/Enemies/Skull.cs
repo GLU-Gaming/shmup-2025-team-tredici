@@ -28,4 +28,14 @@ public class Skull : EnemyBase
         GameManagerScript.CurrentScore += 1;
         Destroy(gameObject);
     }
+
+    public override void OnCollisionEnter(Collision collision)
+    {
+        base.OnCollisionEnter(collision);
+        if (collision.gameObject.GetComponent<Movement>())
+        {
+            Audio.PlayOneShot(HitAudio);
+            OnDeath();
+        }
+    }
 }
