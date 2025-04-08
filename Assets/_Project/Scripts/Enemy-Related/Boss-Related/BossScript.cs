@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.PlayerSettings;
 using Random = UnityEngine.Random;
 
 public class BossScript : MonoBehaviour
