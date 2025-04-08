@@ -413,3 +413,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MCSpeed: 0
   Bullet: {fileID: 8532653571576482099, guid: be9e6062aac24894ab5ec1d772cbe446, type: 3}
+  hitParticle: {fileID: 0}
+  ShootParticle: {fileID: 0}
