@@ -8,7 +8,6 @@ public class DeathScreenBGMusic : MonoBehaviour
     void Start()
     {
         m_AudioSource = GetComponent<AudioSource>();
-        
     }
 
     private void Update()
@@ -16,10 +15,11 @@ public class DeathScreenBGMusic : MonoBehaviour
         if (m_AudioSource.isPlaying)
         {
 
-        } else
+        }
+        else
         {
             gameObject.SetActive(false);
             bgmusic.SetActive(true);
         }
-    } 
+    }
 }

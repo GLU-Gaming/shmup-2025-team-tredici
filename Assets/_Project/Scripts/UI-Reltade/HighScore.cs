@@ -10,15 +10,15 @@ public class HighScore : MonoBehaviour
 
     void Start()
     {
+        //saves the highscore in a playerprefeb and also gets it
         HighestScore = PlayerPrefs.GetInt("HighestScore", 0);
-        Currentscore =  PlayerPrefs.GetInt("CurrentScore", 0);
+        Currentscore = PlayerPrefs.GetInt("CurrentScore", 0);
         if (Currentscore > HighestScore)
         {
             HighestScore = Currentscore;
-            PlayerPrefs.SetInt("HighestScore" , HighestScore);
+            PlayerPrefs.SetInt("HighestScore", HighestScore);
             PlayerPrefs.Save();
         }
-        
     }
 
     void Update()

@@ -3280,9 +3280,6 @@ MonoBehaviour:
   EnemyThree: {fileID: 4979470203585694942, guid: 20e64f90af5438c4c850e59438d12319, type: 3}
   EnemyFour: {fileID: 2283439716973220106, guid: e5c890c2bc1714147abf79fd6e62997c, type: 3}
   EnemyFive: {fileID: 6751459129760679549, guid: 9d63eace46a917e46a1bb85d88300278, type: 3}
-  Pickup_FastShoot: {fileID: 0}
-  Pickup_LaserShoot: {fileID: 0}
-  Pickup_Shield: {fileID: 0}
   SpawnInterval: 1
   MaxEnemies: 3
   CurrentEnemies: 0

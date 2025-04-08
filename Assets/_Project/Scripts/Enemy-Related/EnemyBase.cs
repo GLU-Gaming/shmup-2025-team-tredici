@@ -17,7 +17,6 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] public AudioClip HitAudio;
     public AudioSource Audio;
 
-
     public GameManager GameManagerScript;
     public EnemySpawning EnemySpawningScript;
     public GameObject PlayerCharachter;

@@ -6,6 +6,6 @@ public class ParticleExclamation : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(particle,transform.position ,transform.rotation);
+        Instantiate(particle, transform.position, transform.rotation);
     }
 }

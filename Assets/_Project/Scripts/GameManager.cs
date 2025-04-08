@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI TextoftheScore;
     public int CurrentScore;
     public int CurrentLifes = 3;
+    // Alot of gameobjects to turn off/on
     [SerializeField] private GameObject[] Hearts;
     [SerializeField] private GameObject Bluescreen;
     [SerializeField] private GameObject Smiley;
@@ -66,6 +65,7 @@ public class GameManager : MonoBehaviour
 
     private void DestroyEnemies()
     {
+        //Destroys every enemy and bullet when the boss battle starts
         GameObject[] CurrentEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] CurrentBullets = GameObject.FindGameObjectsWithTag("Bullet");
         foreach (GameObject Enemy in CurrentEnemies) { Destroy(Enemy); }

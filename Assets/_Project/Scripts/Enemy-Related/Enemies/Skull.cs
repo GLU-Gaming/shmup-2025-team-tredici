@@ -17,13 +17,13 @@ public class Skull : EnemyBase
     }
     public override void EnemyAttack()
     {
-       //n/a
+        //n/a
     }
 
     public override void OnDeath()
     {
         Audio.Stop(); ;
-        Instantiate(DeathParticle, transform.position , transform.rotation);
+        Instantiate(DeathParticle, transform.position, transform.rotation);
         EnemySpawningScript.CurrentSkulls -= 1;
         GameManagerScript.CurrentScore += 1;
         Destroy(gameObject);
