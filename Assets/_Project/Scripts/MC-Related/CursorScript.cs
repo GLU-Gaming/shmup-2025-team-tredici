@@ -24,17 +24,18 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // shoots if u left click or spacebar
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             ShakeScript3.StartShake();
             GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
             Instantiate(ShootParticle, rb.transform);
         }
-        //|| Physics.queriesHitTriggers for ehh wip attack idk
     }
 
     private void FixedUpdate()
     {
+        //movement
         if (Input.GetAxis("Vertical") > 0)
         {
             rb.AddRelativeForce(new Vector3(0, MCSpeed, 0));
@@ -56,15 +57,8 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            ShakeScript.StartShake2();
-            audioSource.Play();
-            gameManager.CurrentLifes = gameManager.CurrentLifes - 1;
-            Instantiate(hitParticle, rb.transform);
-        }
-
-        if (collision.gameObject.CompareTag("Boss"))
+        // 
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
         {
             ShakeScript.StartShake2();
             audioSource.Play();

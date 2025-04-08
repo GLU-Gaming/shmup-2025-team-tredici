@@ -11,7 +11,7 @@ public class BossArms : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter(Collision collision)

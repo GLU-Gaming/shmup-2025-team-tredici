@@ -69,7 +69,9 @@ public class BossScript : MonoBehaviour
             if (RandomAttack == 1)
             {
                 RandomAttack = 2;
-            } else if (RandomAttack == 2) {
+            }
+            else if (RandomAttack == 2)
+            {
                 RandomAttack = 1;
             }
             Waittime -= Interval;
@@ -78,7 +80,7 @@ public class BossScript : MonoBehaviour
         if (RandomAttack == 1)
         {
             AttackOne();
-           Vector3 pos = transform.position;
+            Vector3 pos = transform.position;
             transform.position = new Vector3(Mathf.Sin(Time.time) * 15, pos.y, pos.z);
         }
         else if (RandomAttack == 2)

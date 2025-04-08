@@ -3,19 +3,16 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawning : MonoBehaviour
 {
-    public GameObject EnemyOne;         //Het object dat je wilt spawnen
-    public GameObject EnemyTwo;
-    public GameObject EnemyThree;
+    public GameObject EnemyOne;   //Alien      //Het object dat je wilt spawnen
+    public GameObject EnemyTwo;   // Spider
+    public GameObject EnemyThree;  // Eye
     public GameObject EnemyFour; //skull
     public GameObject EnemyFive; //cooling cat
-    public GameObject Pickup_FastShoot;
-    public GameObject Pickup_LaserShoot;
-    public GameObject Pickup_Shield;
 
     public float SpawnInterval = 5f;    //Interval tussen de spawns
     private float LastSpawnTIme;        //Tijd van de laatste spawn
-    private GameManager GameManagerScript; 
-   [SerializeField] private float MaxEnemies; // max enemies set amount
+    private GameManager GameManagerScript;
+    [SerializeField] private float MaxEnemies; // max enemies set amount
     // The max of the enemies
     public float CurrentEnemies = 0;
     public float CurrentEyes = 0;
@@ -24,9 +21,6 @@ public class EnemySpawning : MonoBehaviour
     public float CurrentCoolingCats = 0;
     public float CurrentSuns = 0;
 
-    //The Powerup icons
-    
-
     private void Start()
     {
         GameManagerScript = FindFirstObjectByType<GameManager>();
@@ -34,27 +28,26 @@ public class EnemySpawning : MonoBehaviour
 
     void Update()
     {
+        // Spawns enemies every once in a while
         if (Time.time >= LastSpawnTIme + SpawnInterval)
         {
             SpawnObject();
             LastSpawnTIme = Time.time;
         }
-
-        if (GameManagerScript.CurrentScore >= 12)
-        {
-            SpawnPickup();
-        }
     }
 
     void SpawnObject()
     {
+        // Gets random position for enemies
         Vector3 RandomPosition = new Vector3(Random.Range(0, 23), Random.Range(-9, 13), 0);
+        // sees if there is no other enemies on the position
         Collider[] ColliderArray = Physics.OverlapSphere(RandomPosition, 0);
         if (ColliderArray.Length == 0)
         {
             if (GameManagerScript.CurrentScore <= 49)
             {
-                if (EnemyOne != null && CurrentEnemies < MaxEnemies )
+                // Spawn requirements and spawning of enemies
+                if (EnemyOne != null && CurrentEnemies < MaxEnemies)
                 {
                     Instantiate(EnemyOne, RandomPosition, EnemyOne.transform.rotation);
                     CurrentEnemies += 1;
@@ -65,7 +58,7 @@ public class EnemySpawning : MonoBehaviour
                 }
                 else
                 {
-                    
+
                 }
 
                 if (GameManagerScript.CurrentScore > 14 && CurrentSpiders < MaxEnemies + 1)
@@ -94,15 +87,8 @@ public class EnemySpawning : MonoBehaviour
                     RandomPosition = new Vector3(Random.Range(-2, 5), Random.Range(-7, 11), 0);
                     Instantiate(EnemyFive, RandomPosition, EnemyFive.transform.rotation);
                     CurrentCoolingCats += 1;
-                } 
+                }
             }
         }
-    } 
-
-
-    void SpawnPickup()
-    {
-
     }
-
 }
