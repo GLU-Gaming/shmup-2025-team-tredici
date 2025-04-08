@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 0
+  CurrentScore: 48
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -1683,27 +1683,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.658701
+      value: 2.753209
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.6587
+      value: 2.7532084
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.658701
+      value: 2.753209
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.008424
+      value: 11.375
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5248098
+      value: -3.5248
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.381714
+      value: 43.368
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aceb62d4acaa50b4dac8309dfc0d837c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3703,7 +3703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5216664697606925543, guid: a2a6121e4e4463449bdf51e0fb5321f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06286113
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 5216664697606925543, guid: a2a6121e4e4463449bdf51e0fb5321f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4407,9 +4407,9 @@ MonoBehaviour:
   Hands: {fileID: 504020337}
   BulletSpawnPoint: {fileID: 93872358}
   AttackTwoPopUp: {fileID: 729621760}
-  Interval: 20
+  Interval: 8
   Waittime: 0
-  blinkIntensity: 10
+  blinkIntensity: 2
   blinkDuration: 0.05
 --- !u!4 &2005203196 stripped
 Transform:
