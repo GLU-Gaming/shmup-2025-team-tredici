@@ -523,10 +523,14 @@ MonoBehaviour:
   BulletSpawnPoint: {fileID: 3119358766412166711}
   DeathParticle: {fileID: 6489256046778350293, guid: 524a02809061a4f419d687e7b63755ae, type: 3}
   DeathAudio: {fileID: 8300000, guid: 70f0b17e0cbaaba49a39f06cadbec6d8, type: 3}
+  HitAudio: {fileID: 0}
+  Audio: {fileID: 0}
   GameManagerScript: {fileID: 0}
   EnemySpawningScript: {fileID: 0}
   PlayerCharachter: {fileID: 0}
   rb: {fileID: 5795018343848514070}
+  blinkIntensity: 0
+  blinkDuration: 0
 --- !u!54 &5795018343848514070
 Rigidbody:
   m_ObjectHideFlags: 0

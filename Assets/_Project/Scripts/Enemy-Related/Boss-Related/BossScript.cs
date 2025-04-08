@@ -23,14 +23,23 @@ public class BossScript : MonoBehaviour
     private int SwoopSpeed = 10;
     private bool IsAttackTwoActive = false;
     private bool IsAttackThreeActive = false;
-
     private Vector3 ReturnAttackTwoPosition = new Vector3(15, 0, 0);
-
+    MeshRenderer MeshRenderer;
+    // https://www.youtube.com/watch?v=oLT4k-lrnwg&t=787s voor de blink dingen
+    public float blinkIntensity;
+    public float blinkDuration;
+    float blinktimer;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         CurrentHealth = MaxHealth;
         RandomAttack = Random.Range(1, 2);
+
+        MeshRenderer = GetComponent<MeshRenderer>();
+        if (MeshRenderer == null)
+        {
+            MeshRenderer = GetComponentInChildren<MeshRenderer>();
+        }
     }
 
     void Update()
@@ -96,6 +105,10 @@ public class BossScript : MonoBehaviour
             print("RandomAttack error");
         }
 
+        blinktimer -= Time.deltaTime;
+        float lerp = Mathf.Clamp01(blinktimer / blinkDuration);
+        float intensity = (lerp * blinkIntensity) + 1.0f;
+        MeshRenderer.material.color = Color.white * intensity;
 
     }
 
@@ -104,11 +117,11 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.GetComponent<Projectile>())
         {
             CurrentHealth -= 1;
+            blinktimer = blinkDuration;
         }
 
         if (collision.gameObject.CompareTag("Border_Walls") && IsAttackTwoActive == true)
         {
-            //rb.AddRelativeForce  (new Vector3(transform.position.x - ReturnAttackTwoPosition.x , transform.position.y - ReturnAttackTwoPosition.y , 0) * SwoopSpeed);
             transform.position = new Vector3(15, Random.Range(-5, 9), 0);
         };
     }

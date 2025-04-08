@@ -12,6 +12,7 @@ public class CoolingCar : EnemyBase
     public override void EnemyMovement()
     {
         EnemyMaxHP = 1;
+        Carr = true;
         //N/A
     }
 

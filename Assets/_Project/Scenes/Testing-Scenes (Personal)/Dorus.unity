@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 0
+  CurrentScore: 49
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -4346,6 +4346,8 @@ MonoBehaviour:
   AttackTwoPopUp: {fileID: 729621760}
   Interval: 20
   Waittime: 0
+  blinkIntensity: 10
+  blinkDuration: 0.05
 --- !u!4 &2005203196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2281731284638591831, guid: 666024466c3ce7244919e1c5a823bfd1, type: 3}

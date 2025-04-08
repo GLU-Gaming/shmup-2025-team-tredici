@@ -15,6 +15,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] public GameObject DeathParticle;
     [SerializeField] public AudioClip DeathAudio;
     [SerializeField] public AudioClip HitAudio;
+    MeshRenderer MeshRenderer;
     public AudioSource Audio;
 
     public GameManager GameManagerScript;
@@ -22,7 +23,11 @@ public class EnemyBase : MonoBehaviour
     public GameObject PlayerCharachter;
     public Rigidbody rb;
     private Rigidbody EnemyprojectileRigidBody;
-
+    // https://www.youtube.com/watch?v=oLT4k-lrnwg&t=787s voor de blink dingen
+    public float blinkIntensity;
+    public float blinkDuration;
+    float blinktimer;
+    public bool Carr = false;
     void Start()
     {
         // Sets stuff and finds stuff for/to the enemy
@@ -34,6 +39,12 @@ public class EnemyBase : MonoBehaviour
         GameManagerScript = FindFirstObjectByType<GameManager>();
         EnemySpawningScript = FindFirstObjectByType<EnemySpawning>();
         EnemyCurrentHP = EnemyMaxHP;
+
+        MeshRenderer = GetComponent<MeshRenderer>();
+        if (MeshRenderer == null)
+        {
+            MeshRenderer = GetComponentInChildren<MeshRenderer>();
+        }
     }
 
     void Update()
@@ -46,6 +57,14 @@ public class EnemyBase : MonoBehaviour
             OnDeath();
         }
         ShootCooldown = ShootCooldown - Time.deltaTime;
+
+        if (Carr == false)
+        {
+            blinktimer -= Time.deltaTime;
+            float lerp = Mathf.Clamp01(blinktimer / blinkDuration);
+            float intensity = lerp * blinkIntensity;
+            MeshRenderer.material.color = Color.white * intensity;
+        }
     }
 
     public virtual void EnemyMovement()
@@ -69,6 +88,7 @@ public class EnemyBase : MonoBehaviour
         {
             Audio.PlayOneShot(HitAudio);
             EnemyCurrentHP = EnemyCurrentHP - 1;
+            blinktimer = blinkDuration;
         }
     }
 
