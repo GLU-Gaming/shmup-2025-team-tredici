@@ -193,6 +193,8 @@ MonoBehaviour:
   EnemySpawningScript: {fileID: 0}
   PlayerCharachter: {fileID: 0}
   rb: {fileID: 0}
+  blinkIntensity: 10
+  blinkDuration: 0.05
 --- !u!82 &1713574094575302139
 AudioSource:
   m_ObjectHideFlags: 0
