@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -29,7 +30,8 @@ public class Movement : MonoBehaviour
         {
             ShakeScript3.StartShake();
             GameObject SpawnBullet = Instantiate(Bullet, rb.transform);
-            Instantiate(ShootParticle, rb.transform);
+            Instantiate(ShootParticle, new Vector3 (transform.position.x + 3 ,transform.position.y , -2) , Quaternion.identity);
+
         }
     }
 
