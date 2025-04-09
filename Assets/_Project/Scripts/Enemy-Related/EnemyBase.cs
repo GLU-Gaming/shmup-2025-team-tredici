@@ -60,7 +60,7 @@ public class EnemyBase : MonoBehaviour
         {
             blinktimer -= Time.deltaTime;
             float lerp = Mathf.Clamp01(blinktimer / blinkDuration);
-            float intensity = lerp * blinkIntensity;
+            float intensity = (lerp * blinkIntensity) + 1.0f;
             MeshRenderer.material.color = Color.white * intensity;
         }
     }
