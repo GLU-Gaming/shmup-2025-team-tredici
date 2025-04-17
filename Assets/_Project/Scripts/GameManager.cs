@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Hills;
     [SerializeField] private GameObject NormalBGMusic;
     [SerializeField] private GameObject BossBGMusic;
+    [SerializeField] private GameObject SafeSpotText;
     private Shake ShakeScript;
     private bool BossBattleActive = false;
 

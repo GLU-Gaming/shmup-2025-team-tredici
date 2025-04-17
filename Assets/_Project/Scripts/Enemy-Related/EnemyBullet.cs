@@ -22,6 +22,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            Player.GetComponent<Movement>().StartInvinc();
             manager.CurrentLifes -= 1;
             Destroy(gameObject);
         }

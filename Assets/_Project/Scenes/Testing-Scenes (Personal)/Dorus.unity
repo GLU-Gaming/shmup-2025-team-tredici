@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextoftheScore: {fileID: 1099600705}
-  CurrentScore: 0
+  CurrentScore: 49
   CurrentLifes: 3
   Hearts:
   - {fileID: 68290884}
@@ -1275,6 +1275,7 @@ MonoBehaviour:
   Hills: {fileID: 668996965}
   NormalBGMusic: {fileID: 973118843}
   BossBGMusic: {fileID: 1198500419}
+  SafeSpotText: {fileID: 0}
 --- !u!4 &671664643
 Transform:
   m_ObjectHideFlags: 0
@@ -2334,6 +2335,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 305213051416424329, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 592943901778803206, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.0278318
@@ -2453,6 +2458,10 @@ PrefabInstance:
     - target: {fileID: 5428846193161661583, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5428846193161661583, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6098682912742804267, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
       propertyPath: m_Layer
@@ -3182,6 +3191,7 @@ MonoBehaviour:
   Bullet: {fileID: 3752691582674075364, guid: 3ed08651d831e3c47957a702bbef7bfe, type: 3}
   hitParticle: {fileID: 957743843180903949, guid: d26a875383e481647a2618eb0d4f089e, type: 3}
   ShootParticle: {fileID: 1236617528229027519, guid: 16912107a0b91b441b9d9888d25d4133, type: 3}
+  hand: {fileID: 1982625012}
 --- !u!54 &1463780843
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4248,6 +4258,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978434108}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1982625012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 305213051416424329, guid: 6546c28ae176a224b898a2c7a499ac2d, type: 3}
+  m_PrefabInstance: {fileID: 1147560816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2005203191
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,7 +6,6 @@ public class EyeOfRaa : EnemyBase
     public override void EnemyMovement()
     {
         EnemyMaxHP = 6;
-
         pos = transform.position;
         transform.position = new Vector3(pos.x, Mathf.Sin(Time.time) * 10, pos.z);
 
